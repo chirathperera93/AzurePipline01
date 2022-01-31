@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "894149769476",
+    "firebase_url": "https://ayubo-life-plus.firebaseio.com",
+    "project_id": "ayubo-life-plus",
+    "storage_bucket": "ayubo-life-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894149769476:android:d58462b11d6f40d0b67851",
+        "android_client_info": {
+          "package_name": "com.ayubo.life.lifeplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894149769476-ibq9lheo910mfeth4nksc7hd61jlf5el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8rzBi8FUItzwRkuI7nHmq9n7oEw8ENZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894149769476-ibq9lheo910mfeth4nksc7hd61jlf5el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

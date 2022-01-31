@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="5dp">
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/main_cell_background"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:paddingStart="16dp"-->
+    <!--        android:paddingTop="20dp"-->
+    <!--        android:paddingEnd="16dp"-->
+    <!--        android:paddingBottom="20dp">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_position"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/roboto_bold"-->
+    <!--            android:text="3"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="22sp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            card_view:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img_userpicture"-->
+    <!--            android:layout_width="45dp"-->
+    <!--            android:layout_height="45dp"-->
+    <!--            android:layout_marginStart="7dp"-->
+    <!--            android:background="@drawable/userpic"-->
+    <!--            android:contentDescription="@string/todo"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintLeft_toRightOf="@+id/txt_position"-->
+    <!--            card_view:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_username"-->
+    <!--            android:layout_width="150dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="7dp"-->
+    <!--            android:ellipsize="end"-->
+    <!--            android:fontFamily="@font/roboto_medium"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="13sp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="@+id/img_userpicture"-->
+    <!--            card_view:layout_constraintLeft_toRightOf="@+id/img_userpicture"-->
+    <!--            card_view:layout_constraintTop_toTopOf="@+id/img_userpicture" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/flag_image_view"-->
+    <!--            android:layout_width="13dp"-->
+    <!--            android:layout_height="13dp"-->
+    <!--            android:layout_marginStart="7dp"-->
+    <!--            android:layout_marginEnd="2dp"-->
+    <!--            android:visibility="gone"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintLeft_toRightOf="@+id/img_userpicture"-->
+    <!--            card_view:layout_constraintTop_toBottomOf="@+id/txt_username" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_green_tag"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:fontFamily="@font/roboto_medium"-->
+    <!--            android:paddingLeft="10dp"-->
+    <!--            android:paddingTop="3dp"-->
+    <!--            android:paddingRight="10dp"-->
+    <!--            android:paddingBottom="3dp"-->
+    <!--            android:text="Test"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="8sp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintLeft_toRightOf="@+id/img_userpicture"-->
+    <!--            card_view:layout_constraintTop_toBottomOf="@+id/txt_username" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_orange_tag"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:fontFamily="@font/roboto_medium"-->
+    <!--            android:paddingLeft="10dp"-->
+    <!--            android:paddingTop="3dp"-->
+    <!--            android:paddingRight="10dp"-->
+    <!--            android:paddingBottom="3dp"-->
+    <!--            android:text="Test"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="8sp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintLeft_toRightOf="@+id/txt_green_tag"-->
+    <!--            card_view:layout_constraintTop_toBottomOf="@+id/txt_username" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img_main_value_icon"-->
+    <!--            android:layout_width="13dp"-->
+    <!--            android:layout_height="13dp"-->
+    <!--            android:layout_marginEnd="2dp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="@+id/txt_points_text"-->
+    <!--            card_view:layout_constraintRight_toLeftOf="@+id/txt_points_text"-->
+    <!--            card_view:layout_constraintTop_toTopOf="@+id/txt_points_text" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_points_text"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/roboto_medium"-->
+    <!--            android:minHeight="0dp"-->
+    <!--            android:text="40000"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="16sp"-->
+    <!--            card_view:layout_constraintBottom_toTopOf="@+id/txt_sub_points"-->
+    <!--            card_view:layout_constraintRight_toRightOf="parent"-->
+    <!--            card_view:layout_constraintTop_toBottomOf="@+id/txt_username"-->
+    <!--            card_view:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/img_sub_value_icon"-->
+    <!--            android:layout_width="10dp"-->
+    <!--            android:layout_height="10dp"-->
+    <!--            android:layout_marginEnd="2dp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="@+id/txt_sub_points"-->
+    <!--            card_view:layout_constraintRight_toLeftOf="@+id/txt_sub_points"-->
+    <!--            card_view:layout_constraintTop_toTopOf="@+id/txt_sub_points" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_sub_points"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/roboto_medium"-->
+    <!--            android:minHeight="0dp"-->
+    <!--            android:text="80 Points"-->
+    <!--            android:textColor="@color/theme_color"-->
+    <!--            android:textSize="10sp"-->
+    <!--            card_view:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            card_view:layout_constraintRight_toRightOf="parent"-->
+    <!--            card_view:layout_constraintTop_toBottomOf="@+id/txt_points_text" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <LinearLayout
+        android:id="@+id/main_cell_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_userpicture"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/userpic"
+                    android:contentDescription="@string/todo" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/flag_image_view"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="2dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_green_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/txt_orange_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_main_value_icon"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt_points_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="40000"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_sub_value_icon"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt_sub_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="80 Points"
+                        android:textColor="@color/theme_color"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

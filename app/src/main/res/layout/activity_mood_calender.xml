@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".janashakthionboarding.mood_calender.MoodCalenderActivity">
+
+
+    <!--Back Button -->
+    <LinearLayout
+        android:id="@+id/btn_backImgBtn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_menu_height"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickFinish_MoodCal"
+                android:background="@drawable/back_arrow"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_mood_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/btn_backImgBtn_layout"
+        android:text="Mood"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"/>
+    <TextView
+        android:id="@+id/txt_calender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/txt_mood_text"
+        android:text="Calender"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/txt_calender_text">
+
+        <TextView
+            android:id="@+id/txt_question_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:paddingTop="50dp"
+            android:text="How do you feel today?"
+            android:maxLines="3"
+            android:textColor="@color/challenge_list_raw_grey_dark"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/lay_green"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/green">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sm1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay_yellow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/yellow">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sm2"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay_red"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/button_red_color">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sm3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/progressBar_Intro"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

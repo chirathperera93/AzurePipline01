@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:id="@+id/main_share_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_view_bg">
+
+
+        <ImageView
+            android:id="@+id/main_bg_banner_sharebox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:layout_margin="0dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:text="Share Position"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/txt_heading"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txt_6_text"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:layout_below="@+id/txt_heading"
+            android:text="Let people know where you are"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:padding="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+
+        <ImageButton
+            android:id="@+id/btn_6_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/share_btn_orange"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

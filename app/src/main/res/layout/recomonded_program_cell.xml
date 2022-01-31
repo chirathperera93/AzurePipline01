@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_image_rpc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txt_program_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/lifeplus_action_button_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Plan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_lifeplus_rograms_button_text"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_program_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="45dp"
+                android:text="Fitness"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_lifeplus_rograms_heading"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txt_program_button" />
+
+            <TextView
+                android:id="@+id/txt_program_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="8dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="7dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_lifeplus_rograms_desc"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txt_program_heading" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/offer_container"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_bg_drawable_for_textview_lifeplus"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:paddingTop="3dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        card_view:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        card_view:layout_constraintLeft_toLeftOf="parent"-->
+        <!--        card_view:layout_constraintRight_toRightOf="parent"-->
+        <!--        android:paddingBottom="3dp"-->
+        <!--        android:minHeight="0dp"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:gravity="center"-->
+        <!--        android:textAlignment="center"-->
+        <!--        android:textSize="9sp"-->
+        <!--        android:textColor="@color/white"-->
+        <!--        android:text="off">-->
+        <!--    </TextView>-->
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

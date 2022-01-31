@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".goals_extention.DashboardViewActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/theme_color"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_logo_menheight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_color">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:background="@color/theme_color">
+                <LinearLayout
+                    android:id="@+id/btn_backImgBtn_layout"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_backImgBtn"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/back_white_arrow"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/goals_header_big_text"
+            android:paddingLeft="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txt_activity_heading"
+            android:textColor="@color/white"
+            android:text="Dashboard"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color">
+
+
+        <RadioGroup
+            android:id="@+id/rdogrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="4"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_sevendays"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/leftside_rounded_button_bg_black"
+                android:padding="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="7 days"
+                android:textSize="12sp"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/btn_30days"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="30 days"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/grey"
+                android:button="@null"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/btn_90days"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="90 days"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/grey"
+                android:button="@null"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/btn_year"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="2019"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/rightside_rounded_button_bg_grey"
+                android:button="@null"
+                android:gravity="center" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+    <!--Steps Heading ....-->
+    <LinearLayout
+        android:background="@color/theme_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="Steps"/>
+
+    </LinearLayout>
+
+
+    <!--Me and Vs ....-->
+
+    <LinearLayout
+        android:background="@color/theme_color"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="3dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/yellow">
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="5dp"
+                android:fontFamily="sans-serif-black"
+                android:textSize="14sp"
+                android:text="Me"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:fontFamily="sans-serif-black"
+                android:textSize="14sp"
+                android:text="VS"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="3dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_select_user_gruop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-black"
+                android:paddingRight="5dp"
+                android:textSize="14sp"
+                android:text="All users avg"/>
+            <ImageView
+                android:id="@+id/img_btn_dropdown"
+                android:layout_width="14dp"
+                android:layout_height="7dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dropdown_arrow"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Chart goes here.....-->
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="250dp"
+          android:background="@color/theme_color"
+          android:paddingBottom="10dp">
+
+          <com.github.mikephil.charting.charts.LineChart
+              android:id="@+id/chart1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_above="@+id/seekBar1" />
+
+      </LinearLayout>
+
+    <!--Your Goals Text.....-->
+
+    <TextView
+        android:id="@+id/tv_favourite_goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="1dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Favourite Goals"/>
+
+
+
+    <!--Your Goals .....-->
+
+        <LinearLayout
+            android:id="@+id/day_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp">
+            <!--Today Scroll  View-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollViewMain"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dateView"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+
+        <!--Quick Insights  Text.....-->
+        <TextView
+            android:id="@+id/quick_insight_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Quick Insights"/>
+    <TextView
+        android:id="@+id/quick_insight_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="@color/timeline_para_title"
+        android:text=""/>
+    <TextView
+        android:id="@+id/quick_insight_error2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="5dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="@color/timeline_para_title"
+        android:text=""/>
+    <!--Insight Table goes here  -->
+
+    <LinearLayout
+        android:id="@+id/layout_insight"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!--Today Scroll  View-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dateView2"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </ScrollView>
+        <!--<ListView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:divider="#999"-->
+            <!--android:dividerHeight="1px"-->
+            <!--android:id="@+id/list_inside">-->
+        <!--</ListView>-->
+
+    </LinearLayout>
+
+
+
+    <!--Recommended Programms .....-->
+    <TextView
+        android:id="@+id/tv_recomonded_programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Recommended Programms"/>
+
+
+    <!--Your Goals .....-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/day_vieww"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginBottom="15dp">-->
+        <!--&lt;!&ndash;Today Scroll  View&ndash;&gt;-->
+        <!--<HorizontalScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/scrollViewMainn"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:paddingLeft="10dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/dateView_programs"-->
+                <!--android:orientation="horizontal">-->
+
+            <!--</LinearLayout>-->
+
+        <!--</HorizontalScrollView>-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>
+
+</ScrollView>

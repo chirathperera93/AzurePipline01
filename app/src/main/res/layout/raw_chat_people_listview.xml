@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp">
+
+    <RelativeLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal">
+
+
+        <ImageView
+            android:id="@+id/img_user_pic_ic2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_image_shadow" />
+
+        <com.ayubo.life.ayubolife.utility.CircleNetworkImageView
+            android:id="@+id/list_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/proff"
+            />
+    </RelativeLayout>
+
+
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/middleText"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_doctorName9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr.Charuni"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_cell_title" />
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/txt_specility"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_cell_sub_text"
+            android:text="General" />
+        <!--<TextView-->
+            <!--android:id="@+id/txt_status"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textStyle="italic"-->
+            <!--android:fontFamily="sans-serif-thin"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/text_cell_sub_text"-->
+            <!--android:text="test" />-->
+
+    </LinearLayout>
+    <!-- Title Of Song-->
+
+
+    <!-- Rightend Duration -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btn_booknow"
+            android:background="@drawable/cell_arrow"/>
+
+
+    </LinearLayout>
+
+
+
+    <!-- Rightend Arrow -->
+
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_schedule_search_results1"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.ayubo.life.ayubolife.home_popup_menu.MyDoctorLocations_Activity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_logo_menheight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_backImgBtn"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_arrow"/>
+            </LinearLayout>
+
+
+        </RelativeLayout></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/second_countraw"
+        android:layout_height="1sp">
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp">
+
+        <com.ayubo.life.ayubolife.utility.CircleNetworkImageView
+            android:id="@+id/img_contype"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="left"
+            android:background="@drawable/userpic"
+            android:gravity="center_horizontal"
+            android:src="@drawable/proff" />
+
+
+        <TextView
+            android:id="@+id/lbl_doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textColor="@color/schedlue_cell_header"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/lbl_specityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/schedlue_cell_desc" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/doc_locationList_lv"
+            android:paddingTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_grey"
+            android:dividerHeight="1dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

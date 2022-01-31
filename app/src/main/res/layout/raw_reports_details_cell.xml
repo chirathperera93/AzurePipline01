@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.qhutch.elevationimageview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/record_item_border"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/txt_rreport_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="Lipid Profile"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="Shukri Rouf"
+                android:textColor="@color/color_727272"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txt_report_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="2018-10-26"
+                android:textColor="@color/color_C3C3C3"
+                android:textSize="9dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+
+                <ImageView
+                    android:id="@+id/img_hospital_logo_ic"
+                    android:layout_width="36dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/hosw" />
+
+                <ImageView
+                    android:id="@+id/img_btn_assgin_new"
+                    android:layout_width="40dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/newrepbtn" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/uaser_assign_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/img_user_pic_ic2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded_image_shadow" />
+
+                <ImageView
+                    android:id="@+id/img_user_pic_ic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/assign_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="8dp" />
+
+
+            <ImageButton
+                android:id="@+id/img_not_assign_ic"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/assign_member"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/report_cell_gradient_bg"></LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_btn_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/report_cell_gradient_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_btn_download"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/reports_download_ic" />
+
+            <TextView
+                android:id="@+id/txt_btn_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="2dp"
+                android:text="Download"
+                android:textColor="@color/reports_normal_text"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_line"
+            tools:ignore="Suspicious0dp"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_chart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/report_cell_gradient_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_btn_chart"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/reports_view_ic" />
+
+            <TextView
+                android:id="@+id/txt_btn_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="2dp"
+                android:text="View"
+                android:textColor="@color/reports_normal_text"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_line"
+            tools:ignore="Suspicious0dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/report_cell_gradient_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_btn_review"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/reports_review_ic" />
+
+            <TextView
+                android:id="@+id/txt_btn_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="2dp"
+                android:text="Review"
+                android:textColor="@color/reports_normal_text"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_line"
+            tools:ignore="Suspicious0dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/report_cell_gradient_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_btn_share"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/reports_share_ic" />
+
+            <TextView
+                android:id="@+id/txt_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="2dp"
+                android:text="Share"
+                android:textColor="@color/reports_normal_text"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_line"
+            tools:ignore="Suspicious0dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/report_cell_gradient_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reports_delete_ic" />
+
+            <TextView
+                android:id="@+id/txt_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="2dp"
+                android:text="Delete"
+                android:textColor="@color/reports_normal_text"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/report_cell_gradient_bg"></LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:background="@color/table_cell_border">-->
+
+    <!--    </LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<resources>
+	<dimen name="text_button_title">14sp</dimen>
+	<dimen name="image_sub_icon">34dp</dimen>
+	<dimen name="corner_radius">1.8dp</dimen>
+	<dimen name="fab_margin">9.6dp</dimen>
+	<dimen name="button_secondary_horizontal_margins">19.2dp</dimen>
+	<dimen name="edittext_padding">6dp</dimen>
+	<dimen name="title_horizontal_margins">9.6dp</dimen>
+	<dimen name="button_padding">12dp</dimen>
+	<dimen name="button_horizontal_margins">15dp</dimen>
+    <dimen name="image_action_button">21.6dp</dimen>
+	<dimen name="image_main_icon">36dp</dimen>
+    <dimen name="card_horizontal_margins">12dp</dimen>
+    <dimen name="text_primary_size">19.2sp</dimen>
+	<dimen name="text_quinary_size">8.4sp</dimen>
+	<dimen name="text_secondary_size">14sp</dimen>
+	<dimen name="text_tertiary_size">12sp</dimen>
+	<dimen name="text_quaternary_size">9.6sp</dimen>
+	<dimen name="image_medium">42dp</dimen>
+	<dimen name="image_big">60dp</dimen>
+
+	<dimen name="black_button_padding_horizontal">20dp</dimen>
+	<dimen name="black_button_padding_vertical">7dp</dimen>
+
+    <dimen name="videocall_doctor_image_weight">80dp</dimen>
+	<dimen name="videocall_doctor_image_height">91dp</dimen>
+
+	<dimen name="consultant_name_text_size">15sp</dimen>
+	<dimen name="consultant_spec_text_size">12sp</dimen>
+
+    <dimen name="text_cell_title">14sp</dimen>
+	<dimen name="text_cell_sub_text">10sp</dimen>
+
+    <dimen name="chat_text_date">9sp</dimen>
+
+
+    <dimen name="text_main_heading_title_big">25sp</dimen>
+	<dimen name="text_main_heading_title_normal">14sp</dimen>
+	<dimen name="text_main_heading_title_small">15sp</dimen>
+
+
+    <dimen name="text_page_header">14sp</dimen>
+	<dimen name="text_reports_cell_date_heading">12sp</dimen>
+	<dimen name="text_cell_normal_text">10sp</dimen>
+
+    <!--	Life Plus Start-->
+
+    <dimen name="text_lifeplus_rograms_button_text">10sp</dimen>
+	<dimen name="text_lifeplus_rograms_heading">10sp</dimen>
+	<dimen name="text_lifeplus_rograms_desc">8sp</dimen>
+
+
+
+	<dimen name="text_lifeplus_rograms_heading_inside">12sp</dimen>
+
+	<!--	Life Plus End-->
+	<!-- LifePlus  -->
+	<dimen name="tab_programs_button_margin">10dp</dimen>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="8dp"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangle_line" />
+
+        <LinearLayout
+            android:id="@+id/done_button_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="17.63dp"
+                android:layout_height="13.42dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/mark_as_done" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Mark as complete"
+                android:textColor="@color/color_3B3B3B" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cancel_button_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="12.49dp"
+                android:layout_height="12.49dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/mark_as_cancelled" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="21dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Mark as incomplete"
+                android:textColor="@color/color_3B3B3B" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

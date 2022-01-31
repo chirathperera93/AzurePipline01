@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login__first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.ayubo.life.ayubolife.login.LoginActivity_First">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayoutForCommunityCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainLinearLayoutForCommunityImage"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/blur_background"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="36dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="36dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Enter your Community Key"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="Use your COMMUNITY CODE to join a community and enjoy special benefits"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="25dp">
+
+                <EditText
+                    android:id="@+id/code_1"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_2"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_3"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_4"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_5"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_donthvpromocode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Skip"
+                android:textColor="@color/history_price"
+                android:textSize="14sp" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="left"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingLeft="20dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_plswait"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Please wait.."-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textStyle="bold" />-->
+
+            <!--                <com.android.volley.toolbox.NetworkImageView-->
+            <!--                    android:id="@+id/img_person"-->
+            <!--                    android:layout_width="60dp"-->
+            <!--                    android:layout_height="60dp"-->
+            <!--                    android:layout_margin="0dp"-->
+            <!--                    android:padding="0dp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_desc"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text=""-->
+            <!--                    android:textColor="@color/white" />-->
+            <!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutForConnecting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/community_refresh_icon" />
+
+            <TextView
+                android:id="@+id/connectingCommunityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Connecting to the community"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayoutForCommunityImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_plswait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Please wait.."
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_person"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:focusableInTouchMode="true"-->
+    <!--        android:gravity="left"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:focusable="true"-->
+    <!--            android:focusableInTouchMode="true"-->
+    <!--            android:text="Enter your"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="30sp" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Community Key"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="30sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            &lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:layout_height="0.2dp"&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:background="@color/white">&ndash;&gt;-->
+
+    <!--            &lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:paddingTop="25dp">-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/code_1"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/code_2"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/code_3"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/code_4"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/code_5"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt_donthvpromocode"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Skip"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="20sp" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="left"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:paddingLeft="20dp">-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/txt_plswait"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Please wait.."-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textStyle="bold" />-->
+
+    <!--                <com.android.volley.toolbox.NetworkImageView-->
+    <!--                    android:id="@+id/img_person"-->
+    <!--                    android:layout_width="60dp"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:layout_margin="0dp"-->
+    <!--                    android:padding="0dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/txt_desc"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text=""-->
+    <!--                    android:textColor="@color/white" />-->
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+
+</RelativeLayout>

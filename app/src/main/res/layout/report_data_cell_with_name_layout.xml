@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="20dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/reports_data_left_coner"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/report_line_color_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Colesterol"/>
+
+            <TextView
+                android:id="@+id/txt_report_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="8sp"
+                android:fontFamily="sans-serif-black"
+                android:text="cm"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

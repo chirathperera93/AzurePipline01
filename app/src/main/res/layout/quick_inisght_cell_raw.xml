@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txt_quick_insight_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="69% times you failed to achieve diet related goals"/>
+
+    <!--Have chat with an Expert.....-->
+    <TextView
+        android:id="@+id/txt_quick_insight_have_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="Have chat with an Expert"/>
+
+
+    <!--Expert Chat people list .....-->
+
+    <LinearLayout
+        android:id="@+id/day_view_chat_expert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="15dp">
+        <!--Today Scroll  View-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewMain_chat_expert"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/dateView_chat_expert"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

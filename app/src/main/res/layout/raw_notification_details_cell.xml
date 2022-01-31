@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?><!--<androidx.cardview.widget.CardView
+ xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:elevation="5dp"-->
+<!--    app:cardCornerRadius="5dp"-->
+<!--    android:background="@color/white"-->
+<!--    android:layout_marginRight="10dp"-->
+<!--    android:layout_marginLeft="10dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:layout_marginBottom="5dp">-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/main_layer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:padding="15dp"-->
+<!--        android:background="@color/notification_cell_bg">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/img_user_pic_ic_lay"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_gravity="center_horizontal">-->
+<!--            <ImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:background="@drawable/rounded_image_shadow" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_user_notificaton"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_toEndOf="@+id/img_user_pic_ic_lay"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingLeft="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Dr Husen Darmalingam"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_cell_title"-->
+<!--                android:fontFamily="sans-serif-black" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_desc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="sans-serif-black"-->
+<!--                android:text="This is a text description..."-->
+<!--                android:textColor="@color/homepage_bottom_menu_textcolor_unselected"-->
+<!--                android:textSize="@dimen/text_cell_sub_text" />-->
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:gravity="right"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_notification_time"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="sans-serif-black"-->
+
+<!--                android:text="9.20am"-->
+<!--                android:textColor="@color/notification_cell_time"-->
+<!--                android:textSize="8sp"-->
+<!--                />-->
+
+<!--             <ImageView-->
+<!--                 android:id="@+id/txt_notification_readed"-->
+<!--                 android:layout_width="10dp"-->
+<!--                 android:layout_height="10dp"-->
+<!--                 android:layout_margin="5dp"-->
+<!--                 android:background="@drawable/noti_read_icon"/>-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--    </RelativeLayout>-->
+
+
+<!--</androidx.cardview.widget.CardView>-->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layer"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    app:cardCornerRadius="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/img_user_notificaton_layout"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="6dp">
+
+        <RelativeLayout
+            android:id="@+id/user_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user_notificaton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/default_profile_pic" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_image_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/notification_count_circle"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/img_user_notificaton_layout"
+        android:paddingStart="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/txt_notification_time"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="1"
+                    android:textColor="@color/color_2C2C2C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_notification_time"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_BDBDBD"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxLines="1"
+                android:textColor="@color/color_777777"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_EAEAEA" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

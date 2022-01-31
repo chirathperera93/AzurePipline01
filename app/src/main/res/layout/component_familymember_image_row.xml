@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/img_profile_doctor_row2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_shdow_memeber" />
+
+        <!--grey_circle_background-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile_doctor_row"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_profile_pic"
+           />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_name_doctor_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Sunil Perera"
+        android:textColor="@color/reports_normal_text"
+        android:fontFamily="sans-serif-black"
+        android:textSize="@dimen/text_cell_normal_text"
+        />
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".janashakthionboarding.dayanamic_questions.NewAnswerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/full_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_back_menu_janas"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/top_menu_height"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:id="@+id/btn_backImgBtn_layout_popup"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_jana_answer_back"
+                    android:background="@drawable/back_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+          >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/img_jana_answer_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_answerpage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THAT'S CORRECT"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingRight="15dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"/>
+
+                <ImageView
+                    android:id="@+id/img_correct_tick"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_answerpage_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:fontFamily="sans-serif-black"
+                android:textSize="14sp"
+                android:textColor="@color/grey"/>
+
+
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btn_nextquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:background="@drawable/reports_button_gradient_selected"
+                android:text="Next"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

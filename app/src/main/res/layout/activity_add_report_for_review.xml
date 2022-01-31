@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".reports.activity.AddReportForReviewActivity">
+
+    <LinearLayout
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <!--Back Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_menu_height"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_backImgBtn_layout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btn_backImgBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Top Line.. -->
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_search_button"
+        layout="@layout/component_main_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_line"
+        android:layout_marginStart="@dimen/button_horizontal_margins"
+        android:layout_marginEnd="@dimen/button_horizontal_margins"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!--Today Scroll  View-->
+    <HorizontalScrollView
+        android:id="@+id/scrollViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_search_button"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_report_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollViewMain"
+        android:paddingBottom="100dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txt_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/reports_button_gradient_selected"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Add to review"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/errorMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:paddingTop="100dp"
+        android:text="@string/no_report_here"
+        android:textColor="@color/icon_background_color_selected_user"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

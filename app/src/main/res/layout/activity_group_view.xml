@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.ayubo.life.ayubolife.home_group_view.GroupViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/back_layout_groupviewprograms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/img_backBtn_groupviewprogramsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/img_backBtn_groupviewprograms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edt_search_value_store_gr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_backBtn_groupviewprogramsLinear"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/whatsonmind_shadow"
+            android:drawableEnd="@drawable/search_icon"
+            android:hint="@string/search_here"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="11dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/text_color_quinary"
+            android:textColorHint="@color/text_color_quinary"
+            android:textSize="10sp" />
+
+
+        <ScrollView
+            android:id="@+id/scrollViewList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/edt_search_value_store_gr"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:id="@+id/group_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/liststoregroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_title"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/liststoregroup"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@+id/group_title"-->
+                <!--                    android:background="@color/white" />-->
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/progressBar_groupview"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

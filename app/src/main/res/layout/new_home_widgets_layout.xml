@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FCFCFC"
+        android:orientation="vertical">
+        <!--android:background="@drawable/new_home_time_bg"-->
+        <!--Today Title   android:background="@drawable/new_home_time_bg"  View-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Today"
+                android:textColor="@color/heading_new_design"
+
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--Today Scroll  View-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layout_main_menu_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--Services Title View-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Quick Links"
+                android:textColor="@color/heading_new_design"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--Services Scroll  View-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="30dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layout_main_menu_horizontal_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FCFCFC"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="3dp"-->
+        <!--android:background="#ececed"></LinearLayout>-->
+
+
+        <!--android:background="@drawable/whatbg"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_FCFCFC"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/whatson_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/whatsonmind_shadow"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--Timeline heading text-->
+                <LinearLayout
+                    android:id="@+id/whatson_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_width="58dp"
+                            android:layout_height="58dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/profile_img_shadow" />
+
+                        <ImageView
+                            android:id="@+id/img_timeline_post_click"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/lbl_whatsonyourmind"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="What's on your mind ?"
+                        android:textColor="@color/whatsonmind_new_design"
+                        android:textSize="10sp" />
+
+
+                    <ImageView
+                        android:id="@+id/whatson_content_camera"
+                        android:layout_width="20dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/cam_tl" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="3dp"-->
+        <!--android:background="#ececed">-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

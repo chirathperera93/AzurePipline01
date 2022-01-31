@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/subscribe_background_card"
+    android:layout_width="168dp"
+    android:layout_height="298dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="@color/subscribe_card_background"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="18dp"
+        app:contentPadding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subscription_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_bold"
+                android:maxLines="1"
+                android:textColor="@color/color_727272"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/subscription_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscription_topic"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/color_727272"
+                android:textSize="8sp" />
+
+
+            <LinearLayout
+                android:id="@+id/period_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscription_description"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/subscription_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-24dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/color_727272"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/subscription_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/color_727272"
+                    android:textSize="36sp" />
+
+
+                <TextView
+                    android:id="@+id/subscription_frequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="1"
+                    android:textColor="@color/color_727272"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rules_liner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/start_now_button_main"
+                android:layout_below="@+id/period_linear_layout"
+                android:orientation="vertical" />
+
+
+            <LinearLayout
+                android:id="@+id/start_now_button_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/start_now_button"
+                    android:layout_width="73dp"
+                    android:layout_height="21dp"
+                    android:background="@drawable/life_plus_all_corners_rounded_gradient"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:paddingStart="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="2dp"
+                    android:text="Start Now"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.cardview.widget.CardView>

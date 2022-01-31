@@ -1,0 +1,168 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ayubo.life.ayubolife.fragments.HomeDesign">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1800"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+         <!--Today Title View-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="168"
+                android:paddingLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:text="Today"/>
+            </LinearLayout>
+
+        <!--Today Scroll  View-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="480">
+
+            <LinearLayout
+                android:id="@+id/layout_main_menu_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_transparent_80"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--Services Title View-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="228"
+                android:paddingBottom="30dp"
+                android:paddingLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:text="Services"/>
+            </LinearLayout>
+
+        <!--Services Scroll  View-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="400"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_main_menu_horizontal_footer"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        <!--Last  View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="510"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:background="@drawable/top_two_rounded_coner_white_view">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="100">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="Go to my"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:text="Timeline"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="You have"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="12 new messages"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:layout_width="37dp"
+                        android:layout_height="58dp"
+                        android:layout_marginRight="50dp"
+                        android:background="@drawable/next_btn_ic"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

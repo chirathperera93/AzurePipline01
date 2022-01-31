@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/newlogo" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/animation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/animatetext_welcome"
+        android:textColor="@color/white" />
+
+    <!--    <com.hanks.htextview.typer.TyperTextView-->
+    <!--        android:id="@+id/animation_text"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="20dp"-->
+    <!--        android:paddingRight="20dp"-->
+    <!--        android:text=""-->
+    <!--        app:charIncrease="3"-->
+    <!--        app:typerSpeed="100" />-->
+
+    <!--    <com.hanks.htextview.typer.TyperTextView-->
+    <!--        android:id="@+id/ani_name_lbl"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        android:paddingRight="20dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        android:text=""-->
+    <!--        app:charIncrease="3"-->
+    <!--        app:typerSpeed="100" />-->
+
+
+    <TextView
+        android:id="@+id/ani_name_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/animatetext_entername"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/ani_mobile_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white" />
+
+    <!--    <com.hanks.htextview.typer.TyperTextView-->
+    <!--        android:id="@+id/ani_mobile_lbl"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingRight="20dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        android:text=""-->
+    <!--        app:charIncrease="3"-->
+    <!--        app:typerSpeed="100" />-->
+
+    <TextView
+        android:id="@+id/ani_summery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white" />
+
+    <!--    <com.hanks.htextview.typer.TyperTextView-->
+    <!--        android:id="@+id/ani_summery"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingRight="20dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        android:text=""-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:charIncrease="3"-->
+    <!--        app:typerSpeed="100" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="85"
+            android:background="@color/grey_transparent_20"
+            android:hint="@string/hint_enter_your_name"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/theme_color"
+            android:textColorHint="@color/theme_color"
+            android:textSize="@dimen/small_text_size" />
+
+        <Button
+            android:id="@+id/btn_next1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:background="@null"
+            android:onClick="clickNext"
+            android:text="@string/btn_text_next" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/txt_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="85"
+            android:background="@color/grey_transparent_20"
+            android:hint="@string/hint_enter_your_mobile"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/theme_color"
+            android:textColorHint="@color/theme_color"
+            android:textSize="@dimen/small_text_size" />
+
+
+        <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="15"-->
+        <!--android:onClick="clickMobileLogin"-->
+        <!--android:id="@+id/btn_next2"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@null"-->
+        <!--android:text="NEXT"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+</LinearLayout>

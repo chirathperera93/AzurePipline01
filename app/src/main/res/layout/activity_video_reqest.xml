@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.ayubo.life.ayubolife.channeling.activity.DoctorActivity">
+
+    <TextView
+        android:id="@+id/txt_sub_title_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/make_a"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_quaternary_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_title_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/video_call"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_secondary_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sub_title_request" />
+
+    <EditText
+        android:id="@+id/edt_search_doctor_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittext_grey_background"
+        android:drawableEnd="@drawable/search"
+        android:drawablePadding="10dp"
+        android:hint="@string/doctor_speciality"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:textSize="@dimen/text_quaternary_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_request" />
+
+    <TextView
+        android:id="@+id/txt_name_doctor_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/dummy_doctor"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="@dimen/text_secondary_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_search_doctor_request" />
+
+    <TextView
+        android:id="@+id/txt_specialty_doctor_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dummy_specialty"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_quaternary_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_doctor_request" />
+
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/recycler_doctors_request"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_specialty_doctor_request" />
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/img_video_button"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginStart="64dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:src="@drawable/default_profile_pic"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/img_channel_button"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/recycler_doctors_request" />-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/img_channel_button"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:src="@drawable/default_profile_pic"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/img_review_button"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/img_video_button"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/recycler_doctors_request" />-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/img_review_button"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginEnd="64dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:src="@drawable/default_profile_pic"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/img_channel_button"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/recycler_doctors_request" />-->
+
+    <include
+        android:id="@+id/constrain_button_layout_video"
+        layout="@layout/component_option_button_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_doctors_request" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_message_book_request"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:text="@string/book_now"-->
+    <!--android:textColor="@color/text_color_secondary"-->
+    <!--android:textSize="@dimen/text_quaternary_size"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/constrain_button_layout_video"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/constrain_button_layout_video"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/constrain_button_layout_video" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_title_session_request"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="@dimen/button_horizontal_margins"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="@string/session"-->
+    <!--android:textColor="@color/text_color_primary"-->
+    <!--android:textSize="@dimen/text_secondary_size"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txt_message_book_request" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_sub_title_session_request"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="@dimen/button_horizontal_margins"-->
+    <!--android:text="@string/upcoming"-->
+    <!--android:textColor="@color/text_color_primary"-->
+    <!--android:textSize="@dimen/text_secondary_size"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/btn_calendar_request"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txt_title_session_request" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_calendar_request"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:text="@string/calendar"-->
+    <!--android:textColor="@color/text_color_widget_primary"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/txt_sub_title_session_request"-->
+    <!--app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <!--<com.cooltechworks.views.shimmer.ShimmerRecyclerView-->
+    <!--android:id="@+id/recycler_schedules_request"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txt_sub_title_session_request"-->
+    <!--app:shimmer_demo_angle="20"-->
+    <!--app:shimmer_demo_child_count="4"-->
+    <!--app:shimmer_demo_layout="@layout/component_session_row_dummy"-->
+    <!--app:shimmer_demo_layout_manager_type="linear_vertical"-->
+    <!--app:shimmer_demo_shimmer_color="#73ffffff"/>-->
+
+    <Button
+        android:id="@+id/txt_video_book_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/book_button_background"
+        android:drawableStart="@drawable/calender_icon"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/book_now"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color_widget_primary"
+        android:textSize="@dimen/text_quaternary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_video_available_date" />
+
+    <Button
+        android:id="@+id/txt_video_book_later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/book_button_background"
+        android:drawableStart="@drawable/calender_icon"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/book_later"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color_widget_primary"
+        android:textSize="@dimen/text_quaternary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/layout_error"
+        layout="@layout/component_error_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_loading_doctors"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_doctors_request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recycler_doctors_request" />
+
+    <TextView
+        android:id="@+id/txt_video_available_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/available_in"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_primary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_video_available_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constrain_button_layout_video"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txt_video_available_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_in_min"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="@dimen/text_primary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_video_available_date"
+        app:layout_constraintStart_toStartOf="@+id/txt_video_available_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_video_available_title" />
+
+    <TextView
+        android:id="@+id/txt_video_available_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_date"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_quinary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_video_available_time"
+        app:layout_constraintStart_toStartOf="@+id/txt_video_available_value"
+        app:layout_constraintTop_toBottomOf="@+id/txt_video_available_value" />
+
+    <TextView
+        android:id="@+id/txt_video_available_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/dummy_time"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="@dimen/text_quinary_size"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/txt_video_price"
+        app:layout_constraintStart_toStartOf="@+id/txt_video_available_date"
+        app:layout_constraintTop_toBottomOf="@+id/txt_video_available_date" />
+
+    <TextView
+        android:id="@+id/txt_video_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/dummy_price"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_tertiary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_video_book_now"
+        app:layout_constraintEnd_toEndOf="@+id/txt_video_book_later" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="txt_video_book_later, txt_video_book_now,txt_video_available_title,
+        constrain_button_layout_video" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

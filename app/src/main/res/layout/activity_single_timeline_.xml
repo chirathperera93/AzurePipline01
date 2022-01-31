@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".notification.activity.SingleTimeline_Activity">
+
+
+
+    <LinearLayout
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <!--Back Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_menu_height"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            >
+            <LinearLayout
+                android:id="@+id/btn_backImgBtn_layout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_backImgBtn"
+                    android:background="@drawable/back_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--Top Line.. -->
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"/>
+
+
+
+    <include layout="@layout/error_layout"/>
+
+
+</LinearLayout>

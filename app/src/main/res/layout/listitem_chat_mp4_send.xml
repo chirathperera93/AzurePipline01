@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="right"
+    android:paddingBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_sendchat_bouble_gray"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/sendcontainer"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="200dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
+            android:layout_height="150dp" tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+            android:id="@+id/imgSendMp4Thumbnail"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnPlaySendMp4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:layout_alignStart="@+id/sendcontainer"
+        android:layout_alignLeft="@+id/sendcontainer"
+        android:layout_alignTop="@+id/sendcontainer"
+        android:layout_alignEnd="@+id/sendcontainer"
+        android:layout_alignRight="@+id/sendcontainer"
+        android:layout_alignBottom="@+id/sendcontainer"
+        app:srcCompat="@drawable/ic_mp4_play_button" />
+
+    <TextView
+        android:id="@+id/txtTimeMp4Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/chat_text_date"
+        android:textColor="@color/chat_text_date"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/sendcontainer"
+        android:layout_alignLeft="@id/sendcontainer"/>
+</RelativeLayout>

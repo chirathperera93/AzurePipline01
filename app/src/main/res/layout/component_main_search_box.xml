@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <EditText
+            android:id="@+id/edt_search_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:hint="@string/search_here"
+            android:textSize="10dp"
+            android:textColor="@color/text_color_quinary"
+            android:textColorHint="@color/text_color_quinary"
+            android:background="@drawable/whatsonmind_shadow"
+            android:drawableEnd="@drawable/search_icon"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_search" />
+
+
+        <TextView
+            android:id="@+id/txt_activity_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/text_main_heading_title_normal"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="Talk to an Expert"/>
+
+
+</LinearLayout>

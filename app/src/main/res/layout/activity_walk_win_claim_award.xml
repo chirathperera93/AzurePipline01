@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".walk_and_win.WalkWinClaimAwardActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_walk_and_win_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/toplayoutwalkwinaward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/getScreenshotArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/walk_win_award_deco_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp">
+
+                        <ImageView
+                            android:id="@+id/walk_win_award_deco_ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/reward_decoration"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:background="@drawable/reward_logo"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintEnd_toEndOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintStart_toStartOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintTop_toTopOf="@+id/walk_win_award_deco_ImageView" />
+
+
+                        <ImageView
+                            android:id="@+id/walk_win_reward_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintEnd_toEndOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintStart_toStartOf="@+id/walk_win_award_deco_ImageView"
+                            app:layout_constraintTop_toTopOf="@+id/walk_win_award_deco_ImageView" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+
+
+                        <TextView
+                            android:id="@+id/walk_win_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:textColor="@color/circularEndColor"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/congratulation_textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/walk_win_username"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/walk_win_sub_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/congratulation_textView"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+
+                        <TextView
+                            android:id="@+id/detail_textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/walk_win_sub_heading"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:paddingBottom="24dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/walk_and_win_new_button_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/walk_and_win_new_button"
+                    android:layout_width="250dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="62dp"
+                    android:layout_marginRight="62dp"
+                    android:background="@drawable/lifeplus_button_style_green"
+                    android:fontFamily="@font/roboto_black"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/walk_and_win_award_share"
+                    android:layout_width="250dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="62dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="62dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/lifeplus_button_style_green"
+                    android:drawableStart="@drawable/share_icon"
+                    android:fontFamily="@font/roboto_black"
+                    android:gravity="center"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="50dp"
+                    android:text="Share"
+                    android:textColor="@color/white"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/claim_reward_ad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/walk_win_sponsor_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:id="@+id/walk_win_ad_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ad_info_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/ad_background_color"
+                        android:src="@drawable/ad_info_icon" />
+
+                    <ImageView
+                        android:id="@+id/ad_close_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/ad_background_color"
+                        android:src="@drawable/ad_close_icon" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

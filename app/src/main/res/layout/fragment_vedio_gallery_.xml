@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ayubo.life.ayubolife.fragments.Medicine_Holder2_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/webView_videogallery">
+
+            </WebView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/menu_grey"
+        android:weightSum="100"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_body"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_body"
+                android:background="@drawable/timeline_active_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_body"
+                android:textColor="@color/black"
+                android:text="Home"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_food"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_food"
+                android:background="@drawable/fitness_active_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_food"
+                android:textColor="@color/black"
+                android:text="Workout"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_mind"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/btn_img_mind"
+                android:background="@drawable/heart"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/btn_health5"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_health"
+                android:background="@drawable/challenge_active_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_health"
+                android:textColor="@color/black"
+                android:text="Challenge"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/btn_health"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_health2"
+                android:background="@drawable/report_active_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_mind"
+                android:textColor="@color/black"
+                android:text="History"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

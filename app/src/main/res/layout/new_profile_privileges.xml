@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoFadeColor="@color/black"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="300dp"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoShadowHeight="0dp"
+    tools:context=".lifeplus.MembershipPrivilege.NewProfilePrivileges">
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profile_privilege_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="16dp"
+            android:text="Your cards"
+            android:textColor="@color/color_3B3B3B"
+            android:textSize="21dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/privilege_support_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/insurance_chat"
+            android:visibility="gone" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerPrivileges"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_below="@+id/profile_privilege_topic"
+            android:layout_marginTop="0dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/card_padding"
+            android:paddingLeft="@dimen/card_padding"
+            android:paddingEnd="@dimen/card_padding"
+            android:paddingRight="@dimen/card_padding"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:id="@+id/SliderDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPagerPrivileges"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" />
+
+
+        <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+            android:id="@+id/profile_privilege_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/privilege_empty_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empty_privilege_card" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="You do not have any cards"
+                android:textColor="@color/color_727272"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:id="@+id/scroll_view_list_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/no_report_data_message"
+        android:focusable="false"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/swipe_up_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/rectangle_line"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/profile_privilege_card_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center_horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:text="Benefits and Offers"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="21dp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center_horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="16dp"
+                android:text="12"
+                android:textColor="@color/history_price"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollViewList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingBottom="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/membership_card_details_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/terms_and_condition_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/color_377DDD"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

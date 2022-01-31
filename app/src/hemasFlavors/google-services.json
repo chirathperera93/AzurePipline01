@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "664241939438",
+    "firebase_url": "https://hemas-hospital-7a669.firebaseio.com",
+    "project_id": "hemas-hospital-7a669",
+    "storage_bucket": "hemas-hospital-7a669.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664241939438:android:713b81da3ef64a4c",
+        "android_client_info": {
+          "package_name": "com.ayubo.life.hemas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664241939438-ic1k344129lkfcm4t3nkajrp4plhcsub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqTA1fo2oQiwxcg0F5-GCRxV73U7iFfdA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

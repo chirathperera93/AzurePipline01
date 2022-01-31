@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <group
+            android:id="@+id/group1"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/new_side_menu_home_icon"
+                android:title="@string/sidemenu_home" />
+        </group>
+
+        <group
+            android:id="@+id/group2"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/new_side_menu_profile_icon"
+                android:title="@string/sidemenu_profile" />
+
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/new_side_menu_history_icon"
+                android:title="@string/sidemenu_history" />
+
+            <item
+                android:id="@+id/nav_payment_history"
+                android:icon="@drawable/new_side_menu_payment_icon"
+                android:title="@string/sidemenu_payment_history" />
+
+
+            <item
+                android:id="@+id/nav_promo"
+                android:icon="@drawable/new_side_menu_community_key_icon"
+                android:title="@string/sidemenu_promocode" />
+
+
+            <item
+                android:id="@+id/nav_badges"
+                android:icon="@drawable/new_side_menu_badges_icon"
+                android:title="@string/sidemenu_badges" />
+        </group>
+        <group
+            android:id="@+id/group3"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_connect"
+                android:icon="@drawable/new_side_menu_connect_device_icon"
+                android:title="@string/sidemenu_connect" />
+
+            <item
+                android:id="@+id/nav_qrcode"
+                android:icon="@drawable/new_side_menu_scan_qr_code_icon"
+                android:title="@string/sidemenu_qrcode" />
+        </group>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/new_side_menu_about_icon"
+            android:title="@string/sidemenu_about" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/new_side_menu_help_feedback_icon"
+            android:title="@string/sidemenu_help" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/new_side_menu_hospitality_icon"
+            android:title="@string/sidemenu_hos_info" />
+
+
+        <!--<item-->
+        <!--android:id="@+id/nav_share"-->
+        <!--android:icon="@drawable/sidemenu_ic_sharen"-->
+        <!--android:title="@string/sidemenu_share" />-->
+        <!--        <item-->
+        <!--            android:id="@+id/nav_coporate"-->
+        <!--            android:icon="@drawable/sidemenu_ic_corporaten"-->
+        <!--            android:title="@string/sidemenu_coporate" />-->
+        <!--        <item-->
+        <!--            android:id="@+id/nav_lifepoints"-->
+        <!--            android:icon="@drawable/lifepoints"-->
+        <!--            android:title="@string/sidemenu_lifepoints" />-->
+
+
+    </group>
+
+
+</menu>

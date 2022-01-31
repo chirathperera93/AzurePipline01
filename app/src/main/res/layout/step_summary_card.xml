@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_background_color_border"
+    android:layout_width="match_parent"
+    android:layout_height="212dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/theme_color"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/main_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/color_4B4C4A"
+                    android:textSize="20sp"
+
+                    />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/walk_win_progress_bar_layout_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/walk_win_progress_bar_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/circular_progress_bar_step_summary"
+                            style="@style/CircularDeterminateProgressBarStepSummary"
+                            android:layout_width="140dp"
+                            android:layout_height="130dp"
+                            android:max="100"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@+id/circular_progress_bar_step_summary"
+                            app:layout_constraintEnd_toEndOf="@+id/circular_progress_bar_step_summary"
+                            app:layout_constraintStart_toStartOf="@+id/circular_progress_bar_step_summary"
+                            app:layout_constraintTop_toTopOf="@+id/circular_progress_bar_step_summary">
+
+
+                            <TextView
+                                android:id="@+id/circle_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="8sp" />
+
+
+                            <TextView
+                                android:id="@+id/circle_centre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:textColor="@color/subscribe_card_background"
+                                android:textSize="21sp" />
+
+
+                            <TextView
+                                android:id="@+id/circle_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="8dp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/target"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/frequency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:paddingStart="8dp"
+                            android:paddingTop="1dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="1dp"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="36dp"
+                    android:layout_toEndOf="@+id/walk_win_progress_bar_layout_main"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/step_icon_linear_layout"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/step_icon"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center|center_horizontal|center_vertical" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/remaining_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:maxLines="1"
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="36dp" />
+
+                    <TextView
+                        android:id="@+id/remaining_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:maxLines="1"
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="11dp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

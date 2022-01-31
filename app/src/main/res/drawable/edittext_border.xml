@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="0.4dp"
+        android:color="@color/schedlue_cell_desc" />
+</shape>

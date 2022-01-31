@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FCFCFC"
+    android:id="@+id/main_cell_view"
+    android:orientation="vertical">
+
+    <!--user_panel-->
+    <LinearLayout
+        android:id="@+id/user_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_FCFCFC"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/img_user_picture"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/userpic"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/timeline_username_new_design"
+                android:textSize="@dimen/timeline_title_text"
+                android:fontFamily="sans-serif-black"
+                android:text="Namal Jayawardane"/>
+            <TextView
+                android:id="@+id/txt_time_ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/font_color_silver"
+                android:textSize="@dimen/timeline_sub_title_text"
+                android:text="2 hours ago"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:id="@+id/img_btn_close_bglayout"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <ImageButton
+                android:id="@+id/img_btn_close_intop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/timeline_close_ic"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--title_panel-->
+    <LinearLayout
+        android:id="@+id/title_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:background="@color/color_FCFCFC"
+        >
+        <TextView
+            android:id="@+id/title_panel_heading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textSize="@dimen/timeline_text"
+            android:textColor="@color/timeline_username_new_design"
+            android:text=""
+            />
+    </LinearLayout>
+
+    <!--text_panel-->
+    <LinearLayout
+        android:id="@+id/content_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:background="@color/color_FCFCFC"
+        >
+
+        <TextView
+            android:id="@+id/text_panel_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/timeline_text"
+            android:maxLines="25"
+            android:textColor="@color/timeline_text"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <!--media_panel-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FCFCFC"
+        android:paddingBottom="10dp"
+        android:id="@+id/media_panel">
+
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/empty_content_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--<ProgressBar-->
+            <!--android:id="@+id/movie_progress"-->
+            <!--style="@style/Widget.AppCompat.ProgressBar"-->
+            <!--android:layout_width="50dp"-->
+        <!--android:adjustViewBounds="true"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center" />-->
+
+
+        <ImageView
+            android:id="@+id/txt_panel_b_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timeline_play_ic"
+            android:contentDescription="@string/empty_content_description"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_coner_button_program_post"
+            android:textColor="@color/black"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txt_panel_b_view_button"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/txt_panel_b_view_button"-->
+            <!--android:background="@drawable/rounded_coner_button_program_post"-->
+            <!--android:minHeight="0dp"-->
+            <!--android:minWidth="0dp"-->
+            <!--android:fontFamily="sans-serif-black"-->
+            <!--android:paddingTop="7dp"-->
+            <!--android:paddingBottom="7dp"-->
+            <!--android:paddingRight="30dp"-->
+            <!--android:paddingLeft="30dp"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/imageView2"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--android:text="No"/>-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/txt_panel_b_view_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="@string/empty_content_description"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/imageView2"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--android:background="@drawable/timeline_view_button_ic" />-->
+
+        <TextView
+            android:id="@+id/program_panel_text_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="QUICK BURN"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_panel_b_text_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="DAY 18"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/program_panel_text_heading" />
+
+        <!--user_link_panel-->
+        <LinearLayout
+            android:id="@+id/user_link_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ececed"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="50dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/link_panel_text_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="www.ayubo.life"
+                    android:textColor="#747474" />
+
+                <TextView
+                    android:id="@+id/link_panel_text_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:text="Lorem Ipsum is simply dummy text of the"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingRight="15dp">
+
+
+                <ImageButton
+                    android:id="@+id/link_panel_timeline_readme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/timeline_readme" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9">
+
+    </LinearLayout>
+
+    <!--user_reaction_panel-->
+    <LinearLayout
+        android:id="@+id/user_reaction_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:orientation="vertical"
+        android:background="@color/color_FCFCFC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Likes-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/user_reaction_panel_like_clicked_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/timeline_like_ic"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_reaction_panel_like_text"
+                    android:paddingLeft="6dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="@dimen/timeline_text"
+                    android:textColor="@color/black"
+                    android:text="Like"
+                    />
+            </LinearLayout>
+
+            <!--Comments-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/timeline_comment_ic"/>
+                <TextView
+                    android:id="@+id/user_reaction_panel_comment_clicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="@dimen/timeline_text"
+                    android:textColor="@color/black"
+                    android:text="Comment"
+                    />
+            </LinearLayout>
+
+            <!--Likes and Comments-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/user_reaction_panel_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingRight="4dp"
+                    android:textSize="@dimen/timeline_text"
+                    android:textColor="@color/timeline_text"
+                    android:text="0 Like"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/timeline_text"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/user_reaction_panel_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/timeline_text"
+                    android:textSize="@dimen/timeline_text" />
+                <TextView
+                    android:id="@+id/user_reaction_panel_comment_second_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="@dimen/timeline_text"
+                    android:textColor="@color/timeline_text"
+                    android:text="Comment"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--User List Likes and Comments-->
+        <LinearLayout
+            android:id="@+id/user_reaction_panel_liked_user_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingTop="12dp">
+
+            <ImageView
+                android:id="@+id/user_reaction_panel_liked_user_list_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/timeline_like_blue_ic_round"/>
+
+            <TextView
+                android:id="@+id/user_reaction_panel_liked_user_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:fontFamily="sans-serif-black"
+                android:textSize="@dimen/timeline_text"
+                android:textColor="@color/timeline_blue_text"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="#ececed">
+</LinearLayout>
+
+</LinearLayout>

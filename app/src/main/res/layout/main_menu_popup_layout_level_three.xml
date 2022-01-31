@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:weightSum="40"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_level_1_M1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_1_M1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_level_1_M1"
+                android:textColor="@color/black"
+                android:text="Doctor"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_mywellnessexpert1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_1_M2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_level_1_M2"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="Dietitian"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myfamilty1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_1_M3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_level_1_M3"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:text="Trainer"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myreports1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_1_M4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:inputType="textMultiLine"
+                android:id="@+id/btn_txt_level_1_M4"
+                android:textColor="@color/black"
+                android:text="Reports"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:weightSum="40"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_level_2_M1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_2_M1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_level_2_M1"
+                android:textColor="@color/black"
+                android:text="Doctor"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_mywellnessexpert2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_2_M2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_level_2_M2"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="Dietitian"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myfamilty1rrr"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_2_M3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_level_2_M3"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:text="Trainer"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myreporffts1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/im_level_2_M4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:inputType="textMultiLine"
+                android:id="@+id/btn_txt_level_2_M4"
+                android:textColor="@color/black"
+                android:text="Reports"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:weightSum="40"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_my_doctor"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_my_doctor"
+                android:background="@drawable/talk_to_doctor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_my_doctor"
+                android:textColor="@color/black"
+                android:text="Doctor"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_mywellnessexpert"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_mywellnessexpert"
+                android:background="@drawable/consult_diatitian"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_mywellnessexpert"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="Dietitian"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myfamilty"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_myfamilty"
+                android:background="@drawable/fitness_trainer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_myfamilty"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:text="Trainer"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_myreports"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_myreports"
+                android:background="@drawable/lab_report"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:inputType="textMultiLine"
+                android:id="@+id/btn_txt_myreports"
+                android:textColor="@color/black"
+                android:text="Records"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:weightSum="40"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_qrcode"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:background="@drawable/qr"
+                android:id="@+id/btn_img_qrcode"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_qrcode"
+                android:textColor="@color/black"
+                android:text="QR Code"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_ordermedicine"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_ordermedicine"
+                android:background="@drawable/order_medicine"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_ordermedicine"
+                android:textColor="@color/black"
+                android:text="Medicine"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/btn_askquestion"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_img_askquestion"
+                android:background="@drawable/ask_question"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_askquestion"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="Ask"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:id="@+id/btn_apps_store"
+                android:background="@drawable/lifestore"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="Store"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

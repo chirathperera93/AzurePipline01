@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".health.OMPage2Sub2AddNewLocation">
+
+    <LinearLayout
+        android:id="@+id/back_topic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_area_shadow"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/page_back_btn_med_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:padding="8dp"
+                android:src="@drawable/arrow_round_back" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Order Medicine"
+            android:textColor="@color/color_3B3B3B"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/back_topic_layout"
+        android:layout_marginTop="-10dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view_for_g_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:apiKey="AIzaSyDWtUq4lZJkNR6Imvv3Ed4vSUWsh4FKEuk"
+            android:background="@color/white"
+            android:fitsSystemWindows="true" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/pin_for_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/ayubo_map_pin" />
+
+            <ImageView
+                android:id="@+id/moving_image"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:src="@drawable/orange_circle_background"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_add_new_location_main"
+        android:layout_below="@+id/main_map"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:id="@+id/add_location_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/main_topic_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Add favourite location"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name_place_text_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Name of the Place "
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/name_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_bg_for_record"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="eg : Home / Office"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="22dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/text_color_quinary"
+                    android:textColorHint="@color/color_EAEAEA"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="House Number"
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/house_number_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_bg_for_record"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="22dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="22dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/text_color_quinary"
+                        android:textColorHint="@color/color_EAEAEA"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Street"
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/street_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_bg_for_record"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="22dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="22dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/text_color_quinary"
+                        android:textColorHint="@color/color_EAEAEA"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Address Line 1"
+                    android:textColor="@color/color_4B4C4A"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/address_line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_bg_for_record"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="22dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/text_color_quinary"
+                    android:textColorHint="@color/color_EAEAEA"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Address Line 2"
+                    android:textColor="@color/color_4B4C4A"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/address_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_bg_for_record"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="22dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/text_color_quinary"
+                    android:textColorHint="@color/color_EAEAEA"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/city_text_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="City "
+                            android:textColor="@color/color_4B4C4A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/city_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_bg_for_record"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="22dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="22dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/text_color_quinary"
+                        android:textColorHint="@color/color_EAEAEA"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:maxLines="1"
+                        android:text="Postal Code"
+                        android:textColor="@color/color_4B4C4A"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/postal_code_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/spinner_bg_for_record"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="22dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="22dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/text_color_quinary"
+                        android:textColorHint="@color/color_EAEAEA"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Landmark"
+                    android:textColor="@color/color_4B4C4A"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/landmark_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_bg_for_record"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:overScrollMode="always"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/text_color_quinary"
+                    android:textColorHint="@color/color_EAEAEA"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/submit_add_new_location_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/submit_add_new_location_btn"
+            android:layout_width="145dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ayubo_life_gradient_rounded_button"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="Add"
+            android:textSize="16sp"
+
+            />
+    </LinearLayout>
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/addLocationProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

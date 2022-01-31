@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_primary_size">32sp</dimen>
+    <dimen name="text_secondary_size">24sp</dimen>
+    <dimen name="text_tertiary_size">20sp</dimen>
+    <dimen name="text_quaternary_size">16sp</dimen>
+    <dimen name="text_quinary_size">14sp</dimen>
+    <dimen name="text_button_title">24sp</dimen>
+
+    <dimen name="image_action_button">36dp</dimen>
+    <dimen name="image_main_icon">60dp</dimen>
+    <dimen name="image_sub_icon">38dp</dimen>
+    <dimen name="image_medium">70dp</dimen>
+    <dimen name="image_big">100dp</dimen>
+    <dimen name="card_horizontal_margins">20dp</dimen>
+    <dimen name="button_horizontal_margins">16dp</dimen>
+    <dimen name="button_secondary_horizontal_margins">32dp</dimen>
+    <dimen name="title_horizontal_margins">16dp</dimen>
+
+    <dimen name="videocall_doctor_image_weight">110dp</dimen>
+    <dimen name="videocall_doctor_image_height">125dp</dimen>
+
+    <dimen name="black_button_padding_horizontal">40dp</dimen>
+    <dimen name="black_button_padding_vertical">13dp</dimen>
+
+    <dimen name="corner_radius">3dp</dimen>
+    <dimen name="edittext_padding">10dp</dimen>
+    <dimen name="button_padding">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="text_cell_title">18sp</dimen>
+    <dimen name="text_cell_sub_text">14sp</dimen>
+
+    <dimen name="text_main_heading_title_big">36sp</dimen>
+    <dimen name="text_main_heading_title_normal">16sp</dimen>
+    <dimen name="text_main_heading_title_small">22sp</dimen>
+
+    <dimen name="text_page_header">16sp</dimen>
+    <dimen name="text_reports_cell_date_heading">18sp</dimen>
+    <dimen name="text_cell_normal_text">12sp</dimen>
+
+
+    <dimen name="tab_programs_button_margin">30dp</dimen>
+
+
+</resources>

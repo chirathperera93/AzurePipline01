@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lifeplus_login_bg"
+    tools:context="com.ayubo.life.ayubolife.new_sidemenu_fragments.AboutFragment">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_logo_menheight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_about__mainbackImgBtn"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_in_about"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!--<ImageView-->
+        <!--android:layout_below="@+id/top_layout"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/powerd_by_logo"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/logo_mobile_samll"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbl_version"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="App Version"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="Life Plus"/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/powerdby_lay"
+        android:weightSum="100"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:id="@+id/terms_layout"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms_text"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:text="Terms and Conditions"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="50"
+        android:id="@+id/privacy_layout"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:id="@+id/privacy_text"
+            android:textColor="@color/white"
+            android:text="Privacy Policy"/>
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/powerdby_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:paddingTop="5dp"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="Developed by Digital Healthcare Solutions (PVT) Ltd"/>
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".janashakthionboarding.title_clicked.TitleClickedActivity">
+
+<LinearLayout
+    android:id="@+id/lay_back_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/top_menu_height"
+    android:layout_gravity="center_vertical"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:gravity="center_vertical">
+    <LinearLayout
+        android:id="@+id/btn_backImgBtn_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickToFinishScreen"
+            android:background="@drawable/back_arrow"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:layout_marginTop="100dp"
+    android:layout_below="@+id/lay_back_menu"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_wanttopay_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Welcome"
+        android:fontFamily="sans-serif-black"
+        android:textSize="24sp"
+        android:textColor="@color/grey"/>
+    <TextView
+        android:id="@+id/txt_wanttopay_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="20dp"
+        android:text="@string/janashakthi_welcome_desc"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="@color/grey"/>
+
+    <TextView
+        android:id="@+id/txt_wanttopay_text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingTop="20dp"
+        android:text="@string/What_would_you"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="@color/grey"/>
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="30dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_pay1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickUpload"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/reports_button_gradient_selected"
+        android:text="Upload"/>
+
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="clickPreceedQes"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/reports_button_gradient_selected"
+        android:text="Set Goals With Questionnaire"/>
+
+</LinearLayout>
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/progressBar_ProceedWith"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

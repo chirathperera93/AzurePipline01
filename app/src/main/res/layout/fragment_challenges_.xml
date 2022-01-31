@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_dark_view"
+    xmlns:arc="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ayubo.life.ayubolife.fragments.TimeLineFragment">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <com.ayubo.life.ayubolife.fragments.TouchyWebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/webView_challenges">
+            </com.ayubo.life.ayubolife.fragments.TouchyWebView>
+
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:weightSum="100"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_body"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_body"
+                android:background="@drawable/home_active_home"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_body"
+                android:textColor="@color/black"
+                android:text="HOME"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_workout"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_workout"
+                android:background="@drawable/fitness_active_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:id="@+id/btn_txt_workout"
+                android:textColor="@color/black"
+                android:text="WORKOUT"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/btn_mind"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/btn_img_love"
+                android:background="@drawable/heart"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/btn_relax"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_relax"
+                android:background="@drawable/destress"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_relax"
+                android:textColor="@color/black"
+                android:text="RELAX"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/btn_eat"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_img_eat"
+                android:background="@drawable/eat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:id="@+id/btn_txt_eat"
+                android:textColor="@color/black"
+                android:text="EAT"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

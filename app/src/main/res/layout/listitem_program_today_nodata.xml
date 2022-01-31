@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="50dp"
+    android:background="#fcfcfc"
+    android:orientation="vertical"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="Today"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No task"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:paddingBottom="30dp"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:background="@drawable/kite"/>
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:text="@string/program_no_today_data"
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+</LinearLayout>

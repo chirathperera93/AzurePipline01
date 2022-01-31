@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_date"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="@dimen/stephistory_textsize"
+            android:textColor="@color/stephistory_text_color"
+            android:text="2018/08/22"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_steps"
+            android:textSize="@dimen/stephistory_textsize"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/stephistory_text_color"
+            android:text="3500"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_mets"
+            android:textSize="@dimen/stephistory_textsize"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/stephistory_text_color"
+            android:text="22"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_distance"
+            android:textSize="@dimen/stephistory_textsize"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/stephistory_text_color"
+            android:text="4.03Km"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cals"
+            android:textSize="@dimen/stephistory_textsize"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/stephistory_text_color"
+            android:text="150"/>
+
+    </LinearLayout>
+
+</LinearLayout>

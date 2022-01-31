@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "25585666974",
+    "firebase_url": "https://seychelles-app.firebaseio.com",
+    "project_id": "seychelles-app",
+    "storage_bucket": "seychelles-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25585666974:android:39c7045326a7cc94",
+        "android_client_info": {
+          "package_name": "com.ayubo.life.seychelles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25585666974-7ptnegekj9s8429vqf9bdfehguj60gpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6XWoWxqHYzwSN1Paf6LhfmMUseg_CBWY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

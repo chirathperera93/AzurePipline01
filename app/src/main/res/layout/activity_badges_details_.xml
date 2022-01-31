@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+android:layout_margin="0dp"
+android:padding="0dp"
+    android:weightSum="100"
+    android:background="@color/white"
+tools:context="com.ayubo.life.ayubolife.map_challenges.BadgesDetails_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical"
+       >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_logo_menheight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_backImgBtn_badges"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_arrow"/>
+            </LinearLayout>
+
+
+        </RelativeLayout></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/second_countraw"
+        android:layout_height="1sp">
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:textSize="25sp"
+        android:text=""
+        android:textColor="@color/black"
+        android:id="@+id/txt_name"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingBottom="20dp"
+       android:layout_gravity="center_horizontal"
+       android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/main_bg_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="0dp"
+                android:layout_margin="0dp" />
+            <ProgressBar
+                android:id="@+id/progressNewsList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                >
+            </ProgressBar>
+        </RelativeLayout>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textColor="@color/black"
+            android:id="@+id/txt_date"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textColor="@color/black"
+            android:id="@+id/txt_desc"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        >
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:id="@+id/btn_share_button"
+           android:fontFamily="sans-serif-black"
+           android:textColor="@color/white"
+           android:background="@color/colorAccent"
+           android:text="Share"
+           android:layout_gravity="center_horizontal"
+           android:gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

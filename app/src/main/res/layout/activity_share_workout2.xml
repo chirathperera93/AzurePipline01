@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/btn_backImgBtn_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_backImgBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back_arrow"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_layout"
+        android:background="@color/second_countraw"
+        android:layout_height="1dp">
+    </LinearLayout>
+  <!--Back Menu-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/health_track_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_line"
+        android:background="@color/white"
+        />
+
+
+
+
+
+</RelativeLayout>

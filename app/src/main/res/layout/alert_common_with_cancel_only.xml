@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_below="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout00"
+        android:background="@color/white">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="15dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:gravity="center_horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="Cart not empty"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:id="@+id/lbl_alert_title"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:textSize="22sp" />-->
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:layout_below="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/lbl_alert_message"
+                android:textColor="@color/black"
+                android:text="Cunt"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blue_accent"
+                android:minHeight="0dp"
+                android:padding="8dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:id="@+id/btn_no"
+                android:text="No"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:minHeight="0dp"
+            android:id="@+id/btn_yes"
+            android:textColor="@color/color_blue_accent"
+            android:text="Yes"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

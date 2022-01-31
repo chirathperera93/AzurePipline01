@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_rounded_coner_four_sides"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+
+        <!--  uta861770 ListRow Left sied Thumbnail image -->
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                >
+
+                <ImageView
+                    android:id="@+id/list_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"/>
+                <!--<ProgressBar-->
+                    <!--android:id="@+id/progressNewsList"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--&gt;-->
+                <!--</ProgressBar>-->
+            </RelativeLayout>
+
+        <!-- Title Of Song-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-black"
+                android:paddingRight="10dp"
+                android:text="Rihanna Love the way lie"
+                android:textColor="#000000"
+                android:typeface="sans"
+                android:textSize="14sp" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ayubo.life.ayubolife",
+  "variantName": "ayuboFlavorsRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 268,
+      "versionName": "8.5.1",
+      "outputFile": "app-ayuboFlavors-release.apk"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.ayubo.life.ayubolife.fragments.NewHomeDesign">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+
+
+    <include layout="@layout/error_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_menu_view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fefefe"
+        android:gravity="center_vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--<ImageButton-->
+                <!--android:layout_width="26dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:background="@drawable/timeline_menu_home"/>-->
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/home_n" />
+                <!--android:background="@drawable/hemas_home"-->
+                <!--android:background="@drawable/timeline_menu_home"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Home"
+                    android:textAlignment="center"
+                    android:textColor="@color/homepage_bottom_menu_textcolor_selected"
+                    android:textSize="@dimen/homepage_bottom_menu_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_workout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_workout_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_workout_img"
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/workout_n" />
+
+                <TextView
+                    android:id="@+id/btn_workout_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Workout"
+                    android:textAlignment="center"
+                    android:textColor="@color/homepage_bottom_menu_textcolor_unselected"
+                    android:textSize="@dimen/homepage_bottom_menu_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_ea2t"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_diet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_diet_img"
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/diet_n" />
+
+                <TextView
+                    android:id="@+id/btn_diet_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Diet"
+                    android:textAlignment="center"
+                    android:textColor="@color/homepage_bottom_menu_textcolor_unselected"
+                    android:textSize="@dimen/homepage_bottom_menu_text_size" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_ea4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_relax_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_relax_img"
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/relax_n" />
+
+                <TextView
+                    android:id="@+id/btn_relax_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Relax"
+                    android:textAlignment="center"
+                    android:textColor="@color/homepage_bottom_menu_textcolor_unselected"
+                    android:textSize="@dimen/homepage_bottom_menu_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_eat5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_health_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_health_img"
+                    android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/health_n" />
+
+                <TextView
+                    android:id="@+id/btn_health_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Health"
+                    android:textAlignment="center"
+                    android:textColor="@color/homepage_bottom_menu_textcolor_unselected"
+                    android:textSize="@dimen/homepage_bottom_menu_text_size" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_menu_view_lifeplus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:weightSum="60">
+
+
+        <LinearLayout
+            android:id="@+id/btn_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:id="@+id/lay_notifications"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+
+                <ImageView
+                    android:id="@+id/img_btn_notifications"
+                    android:layout_width="30dp"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/inactive_home_image" />
+                <!--                android:background="@drawable/lf_messages_icon" />-->
+
+                <LinearLayout
+                    android:id="@+id/notibg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/txt_noti_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/green_circle_drawable_for_textview"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_me_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:minHeight="0dp"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="#8A8A88"
+                android:textSize="12dp" />
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:id="@+id/btn_me_layout"-->
+            <!--                android:gravity="center"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:layout_weight="1">-->
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="18dp"-->
+            <!--                    android:layout_height="18dp"-->
+            <!--                    android:id="@+id/btn_me_img"-->
+            <!--                    android:background="@drawable/me_lifeplus"/>-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:fontFamily="sans-serif-black"-->
+            <!--                    android:textSize="@dimen/homepage_bottom_menu_text_size"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:id="@+id/btn_me_tv"-->
+            <!--                    android:textColor="#bcbcb8"-->
+            <!--                    android:text="Me"/>-->
+            <!--            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_programs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/btn_programs_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_programs_img"
+                    android:layout_width="26.8dp"
+                    android:layout_height="24.92dp"
+                    android:background="@drawable/new_like" />
+
+                <TextView
+                    android:id="@+id/btn_programs_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Discover"
+                    android:textAlignment="center"
+                    android:textColor="#8A8A88"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="74dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_corner_select_menu"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/new_feed_active_icon"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:background="@drawable/new_feed_active_icon" />
+
+                <TextView
+                    android:id="@+id/new_feed_active_icon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Feed"
+                    android:textAlignment="center"
+                    android:textColor="@color/theme_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo-->
+<!--        android:id="@+id/new_home_loading"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:visibility="gone" />-->
+
+    <!--</ScrollView>-->
+</RelativeLayout>

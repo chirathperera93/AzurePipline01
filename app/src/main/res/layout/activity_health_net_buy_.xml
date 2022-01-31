@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context="com.ayubo.life.ayubolife.prochat.appointment.HealthNetBuy_Activity">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:background="@color/white">
+
+
+                <LinearLayout
+                    android:id="@+id/btn_backImgBtn_layout"
+                    android:layout_width="60dp"
+                    android:padding="10dp"
+                    android:layout_height="@dimen/top_logo_menheight">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_backImgBtn_kt"
+                        android:background="@drawable/back_arrow"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/healthnet_image"/>
+            </LinearLayout>
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="20dp"
+    android:layout_centerVertical="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/chat_text_dark"
+            android:text="No delivery charges for all orders above Rs 1500.00 and delivery within Colombo and suburbs ( with a radius of 15km from Colombo 5 )"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/chat_text_dark"
+            android:paddingTop="20dp"
+            android:text="For orders less than Rs 1500/= will be subjected to a delivery charge (Rs 150/= onwards depends upon the distance)"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttonIdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/shape_rect_round_colororange"
+        android:orientation="horizontal"
+        android:padding="11dp">
+
+        <ImageView
+            android:id="@+id/buttonIdImage"
+            android:layout_width="25dp"
+            android:layout_height="17dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/delivery_truck"
+           />
+
+        <TextView
+            android:id="@+id/txtNextToHealthNetBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfuidisplay_semibold"
+            android:text="Sent to healthnetbuy"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_backImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/back_arrow_short_empty" />
+
+    <!-- Editext for Search -->
+    <EditText
+        android:id="@+id/inputSearch_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searc"
+        android:hint="Search"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+    <!-- List View -->
+    <ListView
+        android:id="@+id/list_view_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

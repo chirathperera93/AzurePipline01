@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!--Colesteroll-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@color/report_line_color_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_test_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-black"
+                android:text="198"/>
+
+            <View
+                android:id="@+id/lay_test_data_level"
+                android:layout_width="27dp"
+                android:layout_height="2dp"
+                android:background="@color/green">
+
+            </View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

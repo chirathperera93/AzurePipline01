@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_view_bg">
+        <ImageView
+            android:id="@+id/main_bg_banner_leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/main_bg_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:layout_margin="0dp" />
+        <ProgressBar
+            android:id="@+id/progressNewsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            >
+        </ProgressBar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Heading"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/txt_heading"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="80dp"
+            android:layout_below="@+id/txt_heading"
+            android:id="@+id/txt_description"
+            android:text="Lorem Ipsum has been the industry's standard dummyprinter took a galley of type and scrambled it to m"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

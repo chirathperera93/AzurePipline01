@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".walk_and_win.WalkWinMainActivity">
+
+    <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--        android:id="@+id/pullToRefreshWalkWin"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_walk_and_win_bg">
+
+        <RelativeLayout
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/info_icon" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tips">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/walk_and_win_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/header_text_walk_win"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="@string/walk_and_win"
+                        android:textColor="@color/black"
+                        android:textSize="38dp" />
+
+                    <TextView
+                        android:id="@+id/walk_win_main_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingTop="18dp"
+                        android:text="Daily Challenge"
+                        android:textColor="@color/black"
+                        android:textSize="24dp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/walk_win_progress_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <ProgressBar
+                        android:id="@+id/circular_progress_bar_walk_win"
+                        style="@style/CircularDeterminateProgressBar"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:max="100"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:progress="0" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/circular_progress_bar_walk_win"
+                        app:layout_constraintEnd_toEndOf="@+id/circular_progress_bar_walk_win"
+                        app:layout_constraintStart_toStartOf="@+id/circular_progress_bar_walk_win"
+                        app:layout_constraintTop_toTopOf="@+id/circular_progress_bar_walk_win">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingBottom="25dp"
+                            android:text="You walked"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_view_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/black"
+                            android:textSize="52dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingBottom="12dp"
+                            android:text="Steps"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/walk_award_icon" />
+
+
+                        <TextView
+                            android:id="@+id/walk_and_win_steps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Goal 0 Steps"
+                            android:textColor="@color/black"
+                            android:textSize="11dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/updateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/refreshNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/refresh_now"
+                        android:textColor="@color/circularEndColor" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/walk_and_win_claim_reward_btn"
+                        android:layout_width="250dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="62dp"
+                        android:layout_marginRight="62dp"
+                        android:background="@drawable/rounded_coner_disabled_button_bg"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Loading"
+                        android:textAllCaps="false"
+                        android:textColor="@color/btn_disabled_font"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/claim_reward_ad_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/walk_win_sponsor_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"  />
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/walk_win_sponsor_ad"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="200dp"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:visibility="visible" />-->
+
+                    <LinearLayout
+                        android:id="@+id/walk_win_ad_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ad_info_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/ad_background_color"
+                            android:src="@drawable/ad_info_icon" />
+
+                        <ImageView
+                            android:id="@+id/ad_close_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/ad_background_color"
+                            android:src="@drawable/ad_close_icon" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

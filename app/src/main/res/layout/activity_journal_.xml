@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="com.ayubo.life.ayubolife.map_challenges.MapChallengeActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rdogrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/btn_appointment_left"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/leftside_rounded_button_bg_grey"
+                        android:padding="5dp"
+                        android:text="Map"
+                        android:textSize="12sp"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/btn_appointment_right"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Journal"
+                        android:textSize="12sp"
+                        android:padding="5dp"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/rightside_rounded_button_bg_black"
+                        android:button="@null"
+                        android:gravity="center" />
+
+                </RadioGroup>
+
+<!--                <ImageButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:background="@drawable/map"-->
+<!--                    android:padding="0dp"-->
+<!--                    android:id="@+id/btn_appointment_left" />-->
+
+<!--                <ImageButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:background="@drawable/journal_active"-->
+<!--                    android:id="@+id/btn_appointment_right" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/menu_content"
+            android:layout_marginTop="30dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/jurnal_lv">
+        </ListView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

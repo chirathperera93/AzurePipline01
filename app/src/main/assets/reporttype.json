@@ -1,0 +1,229 @@
+ 
+{
+	"reporttype":[
+{
+   "ServiceItemID": 3567,
+   "ReportName": "Glucose Fasting - Glucometer"
+},
+{
+   "ServiceItemID": 1103,
+   "ReportName": "Blood Urea Nitrogen"
+},
+{
+   "ServiceItemID": 1111,
+   "ReportName": "Corrected Calcium"
+},
+{
+   "ServiceItemID": 1114,
+   "ReportName": "High Density Lipoproteins(HDL)"
+},
+{
+   "ServiceItemID": 1117,
+   "ReportName": "SGOT &  SGPT (AST &  ALT)"
+},
+{
+   "ServiceItemID": 1121,
+   "ReportName": "Total Protein- Serum"
+},
+{
+   "ServiceItemID": 1127,
+   "ReportName": "Cholinesterase"
+},
+{
+   "ServiceItemID": 1169,
+   "ReportName": "Random Urine Calcium"
+},
+{
+   "ServiceItemID": 1184,
+   "ReportName": "eGFR - Estimated Glomerular Filtration Rate"
+},
+{
+   "ServiceItemID": 1185,
+   "ReportName": "Creatinine - Random Urine"
+},
+{
+   "ServiceItemID": 1189,
+   "ReportName": "C-Reactive Protein (CRP)"
+},
+{
+   "ServiceItemID": 1203,
+   "ReportName": "Glucose-  Random (RBS)"
+},
+{
+   "ServiceItemID": 1212,
+   "ReportName": "HBA1C (Glycosylated Haemoglobin)"
+},
+{
+   "ServiceItemID": 1217,
+   "ReportName": "Insulin"
+},
+{
+   "ServiceItemID": 1241,
+   "ReportName": "Stool  Culture"
+},
+{
+   "ServiceItemID": 1246,
+   "ReportName": "Free Triiodothyronine( FT3)"
+},
+{
+   "ServiceItemID": 1247,
+   "ReportName": "Free Thyroxine (FT4)"
+},
+{
+   "ServiceItemID": 1255,
+   "ReportName": "TSH (3rd Generation)"
+},
+{
+   "ServiceItemID": 1269,
+   "ReportName": "Haemoglobin (HB)"
+},
+{
+   "ServiceItemID": 1289,
+   "ReportName": "Beta HCG -  (Quantitative)"
+},
+{
+   "ServiceItemID": 1318,
+   "ReportName": "Dengue Antigen"
+},
+{
+   "ServiceItemID": 1326,
+   "ReportName": "Dengue Antibody"
+},
+{
+   "ServiceItemID": 1329,
+   "ReportName": "Hepatitis A Ig G  Antibody"
+},
+{
+   "ServiceItemID": 1330,
+   "ReportName": "Hepatitis A IgM Antibody"
+},
+{
+   "ServiceItemID": 1331,
+   "ReportName": "Hepatitis B Core Ig M Antibody"
+},
+{
+   "ServiceItemID": 1332,
+   "ReportName": "Hepatitis B core IgG Antibody"
+},
+{
+   "ServiceItemID": 1333,
+   "ReportName": "Hepatitis B E Antibody"
+},
+{
+   "ServiceItemID": 1334,
+   "ReportName": "Hepatitis B E Antigen"
+},
+{
+   "ServiceItemID": 1336,
+   "ReportName": "Hepatitis B Surface Antigen"
+},
+{
+   "ServiceItemID": 1337,
+   "ReportName": "Hepatitis C Antibody"
+},
+{
+   "ServiceItemID": 1338,
+   "ReportName": "Hepatitis D Antibody"
+},
+{
+   "ServiceItemID": 1339,
+   "ReportName": "Hepatitis E Antibody"
+},
+{
+   "ServiceItemID": 1343,
+   "ReportName": "HIV (I & II) Antibody"
+},
+{
+   "ServiceItemID": 1377,
+   "ReportName": "Urine full report"
+},
+{
+   "ServiceItemID": 1383,
+   "ReportName": "Urine Pregnancy Test"
+},
+{
+   "ServiceItemID": 1542,
+   "ReportName": "Urine Culture"
+},
+{
+   "ServiceItemID": 1545,
+   "ReportName": "Cytology - Urine"
+},
+{
+   "ServiceItemID": 1548,
+   "ReportName": "Cholesterol -Total"
+},
+{
+   "ServiceItemID": 1549,
+   "ReportName": "Full Blood count"
+},
+{
+   "ServiceItemID": 1550,
+   "ReportName": "Fasting Plasma Glucose"
+},
+{
+   "ServiceItemID": 1552,
+   "ReportName": "Blood urea"
+},
+{
+   "ServiceItemID": 1554,
+   "ReportName": "Hepatitis A B C Profile"
+},
+{
+   "ServiceItemID": 1565,
+   "ReportName": "Profile Liver"
+},
+{
+   "ServiceItemID": 1566,
+   "ReportName": "Profile Renal"
+},
+{
+   "ServiceItemID": 1567,
+   "ReportName": "Profile Thyroid"
+},
+{
+   "ServiceItemID": 1569,
+   "ReportName": "Stool Full Report"
+},
+{
+   "ServiceItemID": 1706,
+   "ReportName": "Lipid Profile"
+},
+{
+   "ServiceItemID": 2060,
+   "ReportName": "Viral Profile"
+},
+{
+   "ServiceItemID": 2074,
+   "ReportName": "HIV Antigen (p 24)"
+},
+{
+   "ServiceItemID": 2083,
+   "ReportName": "Sperm Antibody"
+},
+{
+   "ServiceItemID": 2233,
+   "ReportName": "Ascitic Fluid Full Report"
+},
+{
+   "ServiceItemID": 2234,
+   "ReportName": "CSF Full Report"
+},
+{
+   "ServiceItemID": 2354,
+   "ReportName": "Haemoglobin  Electrophoresis"
+},
+{
+   "ServiceItemID": 5091,
+   "ReportName": "Troponin I (High Sensitive)"
+},
+{
+   "ServiceItemID": 5143,
+   "ReportName": "TSH - 3rd Generation"
+},
+{
+   "ServiceItemID": 5521,
+   "ReportName": "ESR"
+}
+]
+}

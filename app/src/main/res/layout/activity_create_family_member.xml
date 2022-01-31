@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/create_family_bg"
+    android:orientation="vertical"
+    tools:context=".reports.activity.CreateFamilyMemberActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_heading_visit_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_main_heading_title_small"
+                />
+
+            <TextView
+                android:id="@+id/txt_title_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family Member"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_main_heading_title_big"
+                android:fontFamily="sans-serif-black"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/camera_select_ic"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/middleContent"
+            android:layout_below="@+id/topContent"
+            android:orientation="vertical">
+
+
+            <!--Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/txt_fname"
+                    android:textSize="@dimen/small_text_size"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="Name"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingLeft="15dp"
+                android:background="@color/white_transparent_50"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+
+
+            <!--Relationship -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:id="@+id/date_picker_layout"
+                android:gravity="center_vertical"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:popupBackground="@color/grey"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingLeft="15dp"
+                android:background="@color/white_transparent_50"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!--Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/txt_age"
+                    android:textSize="@dimen/small_text_size"
+                    android:background="@android:color/transparent"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="Age"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingLeft="15dp"
+                android:background="@color/white_transparent_50"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!--Gender  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:id="@+id/gender"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:id="@+id/lbl_gender"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_text_size"
+                        android:text="Gender"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:padding="10dp">
+                        <ImageButton
+                            android:id="@+id/img_btn_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gender_select_male"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:padding="10dp">
+                        <ImageButton
+                            android:id="@+id/img_btn_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/female_ic"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+       android:paddingBottom="15dp">
+
+
+        <ImageButton
+            android:id="@+id/txt_proceed_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createNewMember"
+            android:background="@drawable/create_fm_btn"/>
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_proceed_pay"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:text="@string/create_text"-->
+            <!--android:background="@drawable/book_button_background"-->
+            <!--android:foreground="?attr/selectableItemBackground"-->
+            <!--android:paddingTop="13dp"-->
+            <!--android:paddingBottom="13dp"-->
+            <!--android:textColor="@color/text_color_widget_primary"-->
+            <!--android:fontFamily="sans-serif-black"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="@dimen/text_button_title"-->
+            <!--/>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

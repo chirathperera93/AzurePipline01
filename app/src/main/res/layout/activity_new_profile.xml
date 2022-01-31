@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ayubo.life.ayubolife.lifeplus.ProfileNew">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutMain"
+        style="@style/MyCustomTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:tabGravity="fill"
+        app:tabMode="fixed">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tabLayoutViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_menu_view_lifeplus"
+        android:layout_below="@+id/tabLayoutMain" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_menu_view_lifeplus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:weightSum="60">
+
+        <LinearLayout
+            android:id="@+id/btn_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="74dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_corner_select_menu"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lay_notifications"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/img_btn_notifications"
+                        android:layout_width="30dp"
+                        android:layout_height="26dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/active_ayubo_life_home" />
+                    <!--                android:background="@drawable/lf_messages_icon" />-->
+
+                    <LinearLayout
+                        android:id="@+id/notibg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/txt_noti_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/green_circle_drawable_for_textview"
+                            android:gravity="center"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/btn_me_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:minHeight="0dp"
+                    android:text="Home"
+                    android:textAlignment="center"
+                    android:textColor="@color/theme_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_programs_main_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="goToDiscover"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/btn_programs_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="goToDiscover"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_programs_img"
+                    android:layout_width="26.8dp"
+                    android:layout_height="24.92dp"
+                    android:background="@drawable/new_like"
+                    android:clickable="true"
+                    android:onClick="goToDiscover" />
+
+                <TextView
+                    android:id="@+id/btn_programs_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:onClick="goToDiscover"
+                    android:text="Discover"
+                    android:textAlignment="center"
+                    android:textColor="#8A8A88"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/go_to_home_linear_layout"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="20"-->
+        <!--            android:clickable="true"-->
+        <!--            android:gravity="center"-->
+        <!--            android:onClick="goToFeed"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:paddingTop="5dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/go_to_home"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:clickable="true"-->
+        <!--                android:gravity="center"-->
+        <!--                android:onClick="goToFeed"-->
+        <!--                android:orientation="vertical">-->
+
+
+        <!--                <ImageButton-->
+        <!--                    android:layout_width="29dp"-->
+        <!--                    android:layout_height="29dp"-->
+        <!--                    android:background="@drawable/new_feed_icon"-->
+        <!--                    android:clickable="true"-->
+        <!--                    android:onClick="goToFeed" />-->
+
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:clickable="true"-->
+        <!--                    android:fontFamily="@font/montserrat_medium"-->
+        <!--                    android:onClick="goToFeed"-->
+        <!--                    android:text="Feed"-->
+        <!--                    android:textAlignment="center"-->
+        <!--                    android:textColor="#8A8A88"-->
+        <!--                    android:textSize="12dp" />-->
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/go_to_chat_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="goToMessageList"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/go_to_messages"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="goToMessageList"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/message_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/new_message_icon" />
+
+
+                <!--                <ImageButton-->
+                <!--                    android:layout_width="29dp"-->
+                <!--                    android:layout_height="29dp"-->
+                <!--                    android:background="@drawable/new_feed_icon"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:onClick="goToMessageList"-->
+                <!--                    android:focusable="true" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:onClick="goToMessageList"
+                    android:text="Message"
+                    android:textAlignment="center"
+                    android:textColor="#8A8A88"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/profile_new_loading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

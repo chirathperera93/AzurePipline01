@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".reports.activity.TestReportsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_menu_height"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <!--Back Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/top_menu_height"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                >
+                <LinearLayout
+                    android:id="@+id/btn_backImgBtn_layout"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_backImgBtn"
+                        android:background="@drawable/back_arrow"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--Top Line.. -->
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black_transparent_30">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/txt_activity_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="10dp"
+                android:textSize="@dimen/text_page_header"
+                android:paddingLeft="15dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:text="Lipid Profile"/>
+
+        </RelativeLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:id="@+id/layout_top_menu_horizontal"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <!--Chart Unit goes here.....-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/txt_chart_unit_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+
+        <!--Chart goes here.....-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+
+            <!--No Chart data message ...-->
+            <LinearLayout
+                android:id="@+id/layout_no_report_data_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/no_report_data_message">
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/no_report_data_message_text_big"-->
+                <!--android:fontFamily="sans-serif-black"-->
+                <!--android:textSize="20sp"-->
+                <!--android:text="@string/no_report_chart_data_error_heading"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/no_report_data_message_text_small"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="12sp"
+                    android:text="@string/no_report_chart_data_error"/>
+
+            </LinearLayout>
+
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="220dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+
+
+
+
+        <!--Table View Content ===========================  -->
+        <!--Main Data View-->
+        <LinearLayout
+            android:id="@+id/main_data_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="99dp"
+                android:background="@color/blue"
+                android:orientation="vertical"
+                android:id="@+id/layout_main_menu_horizontal_names">
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_main_menu_horizontal"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--Single Data View-->
+        <LinearLayout
+            android:id="@+id/layout_main_menu_horizontal_single"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

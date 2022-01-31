@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".revamp.v1.activity.WellnessHeroesActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutForTopic"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:background="@drawable/search_area_shadow"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutForTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewForMainBackBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/arrowRoundBack"
+                android:src="@drawable/arrow_round_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Wellness Heroes"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainTabLayout"
+            style="@style/MyCustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutForTopic"
+            android:layout_marginTop="24dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutForTopic"
+        android:layout_marginTop="-8dp"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

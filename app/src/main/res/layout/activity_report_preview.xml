@@ -1,0 +1,137 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_book_later"
+        android:layout_width="0dp"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/selector_janashakthi_button"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:onClick="onSubmitClick"
+        android:textColor="@drawable/selector_janashakthi_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="248dp"
+        android:layout_height="268dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_book_later"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
+
+    <ImageView
+        android:id="@+id/btnDeleteImage"
+        android:layout_width="24dp"
+        android:onClick="onDeleteImageClick"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgPreview"
+        app:layout_constraintEnd_toEndOf="@+id/imgPreview"
+        app:layout_constraintStart_toEndOf="@+id/imgPreview"
+        app:layout_constraintTop_toTopOf="@+id/imgPreview"
+        app:srcCompat="@drawable/close" />
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/spinner_view"-->
+        <!--android:layout_marginTop="56dp"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/imgPreview"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imgPreview"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/imgPreview"-->
+        <!--android:background="@drawable/spinner_dropdown_arrow"-->
+        <!--android:orientation="horizontal">-->
+
+        <TextView
+            android:id="@+id/txt_reportType"
+            android:layout_width="0dp"
+            android:onClick="onReportTypeClick"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/janashakthi_editetext_back_round_grey"
+            android:drawableEnd="@drawable/down_arrow"
+            android:paddingStart="8dp"
+            android:textColor="@color/reports_normal_text"
+            android:fontFamily="@font/sfuidisplay_regular"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:hint="Date"
+            android:paddingEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imgPreview"
+            app:layout_constraintStart_toStartOf="@+id/imgPreview"
+            app:layout_constraintTop_toBottomOf="@+id/imgPreview" />
+
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:backgroundTint="@color/reports_normal_text"-->
+            <!--android:visibility="visible"-->
+            <!--/>-->
+   <!--// </LinearLayout>-->
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:onClick="onCalenderClick"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/janashakthi_editetext_back_round_grey"
+        android:drawableEnd="@drawable/calendar2"
+        android:paddingStart="8dp"
+        android:textColor="@color/reports_normal_text"
+        android:fontFamily="@font/sfuidisplay_regular"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:hint="Date"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgPreview"
+        app:layout_constraintStart_toStartOf="@+id/imgPreview"
+        app:layout_constraintTop_toBottomOf="@+id/txt_reportType" />
+
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/progressBar2"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

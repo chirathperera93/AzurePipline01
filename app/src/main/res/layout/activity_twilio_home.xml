@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:keepScreenOn="true"
+    tools:context="com.ayubo.life.ayubolife.twilio.TwilioHomeActivity">
+
+
+    <!--    <com.twilio.video.VideoView-->
+    <!--        android:id="@+id/primaryVideoView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_above="@+id/bottom_action"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:mirror="true" />-->
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/cardview"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="@color/trancperent" >-->
+
+
+    <com.twilio.video.VideoView
+        android:id="@+id/primaryVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:foreground="@drawable/call_gradient"
+        app:mirror="true"
+        app:scaleType="fit" />
+    <!--    </androidx.cardview.widget.CardView>-->
+
+    <ImageView
+        android:id="@+id/user_camera_off_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:foreground="@drawable/call_gradient"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile_pic"
+        android:visibility="gone" />
+
+    <com.twilio.video.VideoView
+        android:id="@+id/thumbnailVideoView"
+        android:layout_width="102dp"
+        android:layout_height="156dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:mirror="true"
+        app:overlaySurface="true" />
+
+
+    <LinearLayout
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/doctor_image"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_gravity="center"
+            android:src="@drawable/default_profile_pic" />
+
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/videoStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ring_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_actions"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:src="@drawable/foregraound_incoming_img1" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/foregraound_incoming_img2" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/foregraound_incoming_img3" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/foregraound_incoming_img4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/caller_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_actions"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_bold"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/speciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_medium"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_coner_transparent_grey"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/call_timer" />
+
+            <Chronometer
+                android:id="@+id/time_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--                    <LinearLayout-->
+    <!--                        android:id="@+id/connectActionFab"-->
+    <!--                        android:layout_width="68dp"-->
+    <!--                        android:layout_height="68dp"-->
+    <!--                        android:background="@drawable/black_circle_background"-->
+    <!--                        android:padding="16dp">-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectActionFab"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/bottom_actions"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-32dp"
+        android:contentDescription="@string/incoming_call_action"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:backgroundTint="@color/incoming_call"
+        app:fabCustomSize="70dp"
+        app:srcCompat="@drawable/incoming_call_img" />
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_actions"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-48dp"
+        android:background="@drawable/call_action_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/call_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/before_call"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="64dp"-->
+            <!--                android:layout_marginEnd="64dp"-->
+            <!--                android:visibility="gone">-->
+
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentStart="true"-->
+            <!--                    android:padding="10dp">-->
+
+            <!--                    <ImageButton-->
+            <!--                        android:id="@+id/disconnectCallNew"-->
+            <!--                        android:layout_width="70dp"-->
+            <!--                        android:layout_height="70dp"-->
+            <!--                        android:background="@drawable/cut_the_call" />-->
+            <!--                </LinearLayout>-->
+
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:padding="10dp">-->
+
+            <!--                    <ImageButton-->
+            <!--                        android:id="@+id/connectActionFab"-->
+            <!--                        android:layout_width="70dp"-->
+            <!--                        android:layout_height="70dp"-->
+            <!--                        android:background="@drawable/answer_icon" />-->
+            <!--                </LinearLayout>-->
+            <!--            </RelativeLayout>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/disconnectCall"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/cut_the_call"
+                        android:visibility="gone" />
+
+
+                    <!--                    <ImageButton-->
+                    <!--                        android:layout_width="70dp"-->
+                    <!--                        android:layout_height="70dp"-->
+                    <!--                        android:background="@drawable/black_circle_background" />-->
+
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/connectActionFab"-->
+                    <!--                        android:layout_width="68dp"-->
+                    <!--                        android:layout_height="68dp"-->
+                    <!--                        android:background="@drawable/black_circle_background"-->
+                    <!--                        android:padding="16dp">-->
+
+                    <!--                        <ImageButton-->
+                    <!--                            android:layout_width="38dp"-->
+                    <!--                            android:layout_height="26dp"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:background="@drawable/incoming_call_img" />-->
+                    <!--                    </LinearLayout>-->
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/after_call_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/call_action"
+            android:layout_marginTop="-16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/call_cut_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_red_video_call"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/disconnectCallNew"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/call_cut_image" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/video_turn_off_on_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_grey_video_call"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/turnOffCameraActionFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/turn_on_camera" />
+
+                    <ImageButton
+                        android:id="@+id/turnOnCameraActionFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/turn_off_camera"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/voice_mute_unmute_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_grey_video_call"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/muteActionOffFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/unmute_microphone" />
+
+                    <ImageButton
+                        android:id="@+id/muteActionOnFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/mute_microphone"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="50dp"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:background="@drawable/disable_shape_rect_round"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:padding="16dp">-->
+
+                <!--                    <ImageButton-->
+                <!--                        android:layout_width="30dp"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:background="@drawable/flash_light_icon" />-->
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blank_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/camera_switch_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_grey_video_call"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/cameraSwitchActionFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/new_cam_switch" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flash_light_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_disable_video_call"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/flashLightOnActionFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/flash_off" />
+
+                    <ImageButton
+                        android:id="@+id/flashLightOffActionFab"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/flash_on"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/call_text_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/rounded_coner_buttons_grey_video_call"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/callTextOnActionFab"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/call_text" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

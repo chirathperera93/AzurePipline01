@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoFadeColor="@color/black"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="100dp"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoShadowHeight="4dp"
+    tools:context=".map_challange.MapChallangeKActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/googleMapViewnew"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:apiKey="AIzaSyDWtUq4lZJkNR6Imvv3Ed4vSUWsh4FKEuk"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:visibility="gone" />
+
+
+            <com.huawei.hms.maps.MapView
+                android:id="@+id/huaweiMapViewnew"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:apiKey="CgB6e3x9NkNpz7BkDGSAuluxaCv+VThDzUY1YLPX/rC3kw0yQeduG5yDZOUUembyy+fMfvuXnztUWfiwMczTgGXd"
+                android:fitsSystemWindows="true"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/rdogrp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/btn_appointment_left"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:background="@drawable/leftside_rounded_button_bg_black"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Map"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/btn_appointmentright"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="0dp"
+                                    android:background="@drawable/rightside_rounded_button_bg_black"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Journal"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:visibility="gone">
+
+                            <ImageButton
+                                android:id="@+id/btn_leave_challenge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/stop_chalnge" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_daily_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+                android:id="@+id/proDialog"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_popup_advers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/main_bg_share_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--sothree:umanoDragView="@+id/top_bgnew"-->
+    <!-- SLIDING LAYOUT -->
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_bgnew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/top_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_btn_down_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/arrow_down" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/main_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dropdown_items_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout><!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--	xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--	xmlns:tools="http://schemas.android.com/tools"-->
+    <!--	xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--	android:layout_width="match_parent"-->
+    <!--	android:layout_height="match_parent"-->
+    <!--	tools:context=".map_challange.MapChallangeActivity">-->
+
+
+    <!--	<com.google.android.gms.maps.MapView-->
+    <!--		android:id="@+id/mapView"-->
+    <!--		android:apiKey="AIzaSyCDcekAUU9NDm88y4QU6wX-g0SjQovVq7I"-->
+    <!--		android:layout_width="match_parent"-->
+    <!--		android:fitsSystemWindows="true"-->
+    <!--		app:layout_constraintTop_toTopOf="parent"-->
+    <!--		android:background="@color/white"-->
+    <!--		android:layout_height="match_parent" />-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

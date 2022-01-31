@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".goals.AchivedGoal_Activity">
+
+<LinearLayout
+    android:id="@+id/top_line"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_menu_height"
+    android:layout_alignParentStart="true"
+    android:orientation="vertical">
+
+    <!--Back Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        >
+        <LinearLayout
+            android:id="@+id/btn_backImgBtn_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back_Button"
+            android:background="@drawable/back_arrow"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--Top Line.. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_transparent_30">
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--Heading Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/did_you_achive_this_goal_small"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/goal_grey_small_text"
+                android:textSize="@dimen/goals_header_small_text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/did_you_achive_this_goal_large"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/goal_grey_big_text"
+                android:textSize="@dimen/goals_header_big_text" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_share"
+                android:background="@drawable/share_icon"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--Center Image -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:minWidth="150dp"
+            android:minHeight="150dp"
+            android:id="@+id/goalImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/txt_goal_name"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="@dimen/goals_header_big_text"
+            android:padding="20dp"
+            android:text="Goal Name"/>
+
+    </LinearLayout>
+
+
+    <!--Add Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        >
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_achieve_no"
+            android:background="@drawable/rounded_coner_buttons_grey"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:text="No"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_achieve_yes"
+            android:background="@drawable/rounded_coner_buttons_green"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="sans-serif-black"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:text="Yes"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

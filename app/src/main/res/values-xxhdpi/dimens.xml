@@ -1,0 +1,57 @@
+<resources>
+	<dimen name="text_button_title">19.2sp</dimen>
+	<dimen name="image_sub_icon">68dp</dimen>
+	<dimen name="corner_radius">2.4dp</dimen>
+	<dimen name="fab_margin">12.8dp</dimen>
+	<dimen name="button_secondary_horizontal_margins">25.6dp</dimen>
+	<dimen name="edittext_padding">8dp</dimen>
+	<dimen name="title_horizontal_margins">12.8dp</dimen>
+	<dimen name="button_padding">16dp</dimen>
+	<dimen name="button_horizontal_margins">12.8dp</dimen>
+    <dimen name="image_action_button">28.8dp</dimen>
+	<dimen name="image_main_icon">48dp</dimen>
+    <dimen name="card_horizontal_margins">16dp</dimen>
+    <dimen name="text_primary_size">25.6sp</dimen>
+	<dimen name="text_quinary_size">11.2sp</dimen>
+	<dimen name="text_secondary_size">19.2sp</dimen>
+	<dimen name="text_tertiary_size">16sp</dimen>
+	<dimen name="text_quaternary_size">12.8sp</dimen>
+	<dimen name="image_medium">56dp</dimen>
+	<dimen name="image_big">80dp</dimen>
+
+	<dimen name="black_button_padding_horizontal">30dp</dimen>
+	<dimen name="black_button_padding_vertical">10dp</dimen>
+
+    <dimen name="videocall_doctor_image_weight">90dp</dimen>
+	<dimen name="videocall_doctor_image_height">101dp</dimen>
+
+    <dimen name="text_cell_title">16sp</dimen>
+	<dimen name="text_cell_sub_text">12sp</dimen>
+
+	<dimen name="text_main_heading_title_big">30sp</dimen>
+	<dimen name="text_main_heading_title_normal">14sp</dimen>
+	<dimen name="text_main_heading_title_small">20sp</dimen>
+
+
+    <dimen name="text_page_header">15sp</dimen>
+	<dimen name="text_reports_cell_date_heading">15sp</dimen>
+	<dimen name="text_cell_normal_text">12sp</dimen>
+
+
+
+
+	<!--	Life Plus Start-->
+
+
+    <dimen name="text_lifeplus_rograms_button_text">12sp</dimen>
+	<dimen name="text_lifeplus_rograms_heading">12sp</dimen>
+	<dimen name="text_lifeplus_rograms_desc">10sp</dimen>
+
+	<dimen name="text_lifeplus_rograms_heading_inside">14sp</dimen>
+
+	<!--	Life Plus End-->
+	<dimen name="tab_programs_button_margin">20dp</dimen>
+	<dimen name="text_profile_menu">15sp</dimen>
+
+
+</resources>

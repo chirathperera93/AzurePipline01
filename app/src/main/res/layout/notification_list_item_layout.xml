@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_cell_gb"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!--  uta861770 ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dip">
+        <!--<ImageView-->
+            <!--android:id="@+id/notiicon_com_list_image"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"/>-->
+
+        <com.ayubo.life.ayubolife.utility.CircularNetworkImageView
+            android:id="@+id/notiicon_com_list_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:text="ayubo.life"
+            android:textColor="@color/grey"
+            android:typeface="sans"
+            android:textSize="13sp" />
+      </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/clock"/>
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="2017-12-22"
+                android:textColor="@color/blue"
+                android:typeface="sans"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Title Of Song-->
+
+
+
+</RelativeLayout>

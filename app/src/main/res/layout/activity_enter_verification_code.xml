@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login__first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ayubo.life.ayubolife.login.LoginActivity_First">
+
+
+    <RelativeLayout
+        android:id="@+id/go_back_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_coner_menu_white_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="8dp"
+            android:src="@drawable/black_backward_arrow" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/go_back_btn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp">
+
+            <LinearLayout
+                android:id="@+id/logo_liner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/logo_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/enter_pin_description_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_liner_layout"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="46dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/enter_pin_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="Welcome!"
+                    android:textColor="@color/white"
+                    android:textSize="42sp" />
+
+                <TextView
+                    android:id="@+id/enter_pin_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="@string/enter_pin_description_ayubo_life"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/enter_pin_number_liner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enter_pin_description_linear_layout"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/blur_background"
+                android:orientation="vertical"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="@string/enter_verification_code"
+                    android:textSize="14sp" />
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingTop="16dp">-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/code_1"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/montserrat_thin"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="26sp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/code_2"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/montserrat_thin"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="26sp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/code_3"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/montserrat_thin"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="26sp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/code_4"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/montserrat_thin"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="26sp" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/code_5"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/montserrat_thin"-->
+<!--                        android:inputType="number"-->
+<!--                        android:maxLength="1"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="26sp" />-->
+
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="56dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="56dp">
+
+                    <EditText
+                        android:id="@+id/verification_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_thin"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:letterSpacing="1"
+                        android:maxLines="1"
+                        android:textSize="26sp"
+                        tools:targetApi="lollipop" />
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/code_1"-->
+                    <!--                        android:layout_width="40dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/montserrat_thin"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="1"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textSize="26sp" />-->
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/code_2"-->
+                    <!--                        android:layout_width="40dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/montserrat_thin"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="1"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textSize="26sp" />-->
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/code_3"-->
+                    <!--                        android:layout_width="40dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/montserrat_thin"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="1"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textSize="26sp" />-->
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/code_4"-->
+                    <!--                        android:layout_width="40dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/montserrat_thin"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="1"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textSize="26sp" />-->
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/code_5"-->
+                    <!--                        android:layout_width="40dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/montserrat_thin"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="1"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/white"-->
+                    <!--                        android:textSize="26sp" />-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!--            <TextView-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:fontFamily="@font/montserrat_medium"-->
+                    <!--                android:text="@string/resend_otp"-->
+                    <!--                android:textSize="14sp" />-->
+
+                    <Button
+                        android:id="@+id/submit_pin_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="center"
+                        android:onClick="click_GoWithMobileNumber"
+                        android:paddingStart="48dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="48dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/submit"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/loading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

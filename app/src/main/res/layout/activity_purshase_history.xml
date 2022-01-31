@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".payment.activity.PurchaseHistory">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutForPurchaseHistoryTopic"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:background="@drawable/search_area_shadow"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutForPurchaseHistoryTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewForMainPaymentBackBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/arrowRoundBack"
+                android:src="@drawable/arrow_round_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Purchase History"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainHistoryTabLayout"
+            style="@style/MyCustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutForPurchaseHistoryTopic"
+            android:layout_marginTop="24dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+
+    </RelativeLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/purchase_history_relative_layout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/relativeLayoutForPurchaseHistoryTopic"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:layout_marginEnd="8dp">-->
+
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/purchase_history_recycler_view"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:scrollbars="none" />-->
+    <!--    </RelativeLayout>-->
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mainHistoryViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutForPurchaseHistoryTopic"
+        android:background="@android:color/white"
+        android:padding="16dp" />
+
+    <com.ayubo.life.ayubolife.prochat.ui.ProgressAyubo
+        android:id="@+id/purchase_history_loading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

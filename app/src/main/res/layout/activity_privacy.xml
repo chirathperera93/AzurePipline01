@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ayubo.life.ayubolife.fragments.TimeLineFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/top_logo_menheight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_btnBack"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/btn_backImgBtn"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_arrow"/>
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/second_countraw"
+        android:layout_height="1sp">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="20sp"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:textAlignment="viewStart"
+                    android:text="@string/terms_para1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:textAlignment="viewStart"
+                    android:text="@string/terms_para2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:text="COLLECTION OF PERSONAL DATA AND PROTECTION" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:textAlignment="viewStart"
+                    android:text="@string/terms_para3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:paddingTop="20dp"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:text="PLUGINS FOR SOCIAL MEDIA" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:textAlignment="viewStart"
+                    android:text="@string/terms_para4" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:paddingTop="20dp"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:text="CHANGES TO PRIVACY POLICY" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:text="@string/terms_para5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/schedlue_cell_desc"
+                    android:paddingTop="20dp"
+                    android:textAlignment="viewStart"
+                    android:text="@string/terms_para6" />
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="oval">-->
+<!--    <solid android:color="@color/life_plus_gradient_end" />-->
+<!--</shape>-->
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <gradient android:angle="270" android:centerX="35%" android:endColor="@color/circularEndColor" android:startColor="@color/circularStartColor" android:type="linear" />
+
+
+        </shape>
+
+    </item>
+
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <gradient android:angle="270" android:centerX="35%" android:endColor="@color/life_plus_gradient_end" android:startColor="@color/life_plus_gradient_start" android:type="linear" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="oval">
+            <gradient android:angle="270" android:centerX="35%" android:endColor="@color/life_plus_gradient_end" android:startColor="@color/life_plus_gradient_start" android:type="linear" />
+        </shape>
+    </item>
+</selector>

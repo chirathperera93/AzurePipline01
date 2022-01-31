@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".health.OMMainPage">
+
+    <LinearLayout
+        android:id="@+id/back_topic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_area_shadow"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/page_back_btn_submit_om_main"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:padding="8dp"
+            android:src="@drawable/arrow_round_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Order Medicine"
+            android:textColor="@color/color_3B3B3B"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/om_main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_proceed_btn_main"
+        android:layout_below="@+id/back_topic_layout"
+        android:layout_marginTop="-8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/step_navigation_main"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@color/color_F4F4F4"
+                android:gravity="center">
+
+                <com.kofigyan.stateprogressbar.StateProgressBar
+                    android:id="@+id/step_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:spb_animateToCurrentProgressState="true"
+                    app:spb_checkStateCompleted="true"
+                    app:spb_currentStateDescriptionColor="@color/black"
+                    app:spb_currentStateNumber="one"
+                    app:spb_descriptionLinesSpacing="2dp"
+                    app:spb_descriptionTopSpaceIncrementer="8dp"
+                    app:spb_maxDescriptionLines="1"
+                    app:spb_maxStateNumber="four"
+                    app:spb_stateBackgroundColor="@color/white"
+                    app:spb_stateDescriptionColor="@color/color_4B4C4A"
+                    app:spb_stateDescriptionSize="10dp"
+                    app:spb_stateForegroundColor="@color/theme_color"
+                    app:spb_stateLineThickness="2dp"
+                    app:spb_stateNumberBackgroundColor="@color/color_B3B3B3"
+                    app:spb_stateNumberForegroundColor="@color/white"
+                    app:spb_stateSize="10dp"
+                    app:spb_stateTextSize="24dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+
+                <FrameLayout
+                    android:id="@+id/om_fragments"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/submit_proceed_btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/submit_proceed_btn"
+            android:layout_width="155dp"
+            android:layout_height="36dp"
+            android:background="@drawable/radius_background_disable"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login__first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.ayubo.life.ayubolife.login.LoginActivity_First">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayoutForCommunityCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="86dp"
+        android:background="@drawable/blur_background"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="36dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="36dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Enter your Community Key"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="Use your COMMUNITY CODE to join a community and enjoy special benefits"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="25dp">
+
+                <EditText
+                    android:id="@+id/code_1"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_2"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_3"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_4"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/code_5"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_donthvpromocode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Skip"
+                android:textColor="@color/lifeplus_green"
+                android:textSize="14sp" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="left"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingLeft="20dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_plswait"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Please wait.."-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textStyle="bold" />-->
+
+            <!--                <com.android.volley.toolbox.NetworkImageView-->
+            <!--                    android:id="@+id/img_person"-->
+            <!--                    android:layout_width="60dp"-->
+            <!--                    android:layout_height="60dp"-->
+            <!--                    android:layout_margin="0dp"-->
+            <!--                    android:padding="0dp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_desc"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text=""-->
+            <!--                    android:textColor="@color/white" />-->
+            <!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutForConnecting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/community_refresh_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Connecting to the community"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:focusable="true"-->
+    <!--        android:focusableInTouchMode="true"-->
+    <!--        android:gravity="left"-->
+    <!--        android:layout_alignParentStart="true">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:focusable="true"-->
+    <!--            android:focusableInTouchMode="true"-->
+    <!--            android:textColor="@color/lifeplus_green"-->
+    <!--            android:text="Enter your"-->
+    <!--            android:textSize="30sp" />-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:text="Community Key"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="30sp" />-->
+
+    <!--            &lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:layout_height="0.2dp"&ndash;&gt;-->
+    <!--            &lt;!&ndash;android:background="@color/white">&ndash;&gt;-->
+
+    <!--            &lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:paddingTop="25dp"-->
+    <!--            android:orientation="horizontal">-->
+    <!--            <EditText-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:id="@+id/code_1"-->
+    <!--                android:maxLength="1"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:textSize="25sp" />-->
+    <!--            <EditText-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:maxLength="1"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:id="@+id/code_2"-->
+    <!--                android:textSize="25sp" />-->
+    <!--            <EditText-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:maxLength="1"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:id="@+id/code_3"-->
+    <!--                android:textSize="25sp" />-->
+    <!--            <EditText-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:maxLength="1"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:id="@+id/code_4"-->
+    <!--                android:textSize="25sp" />-->
+    <!--            <EditText-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:maxLength="1"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:id="@+id/code_5"-->
+    <!--                android:textSize="25sp" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:gravity="center_horizontal">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:id="@+id/txt_donthvpromocode"-->
+    <!--                android:textSize="20sp"-->
+    <!--                android:textColor="@color/lifeplus_green"-->
+    <!--                android:text="Skip"/>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:gravity="left"-->
+    <!--                android:paddingLeft="20dp">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:id="@+id/txt_plswait"-->
+    <!--                    android:textColor="@color/lifeplus_green"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:text="Please wait.."/>-->
+
+    <!--                <com.android.volley.toolbox.NetworkImageView-->
+    <!--                    android:id="@+id/img_person"-->
+    <!--                    android:layout_width="60dp"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:padding="0dp"-->
+    <!--                    android:layout_margin="0dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:textColor="@color/lifeplus_green"-->
+    <!--                    android:id="@+id/txt_desc"-->
+    <!--                    android:text=""/>-->
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:gravity="left"-->
+    <!--        android:paddingRight="30dp"-->
+    <!--        android:layout_alignParentBottom="true">-->
+
+
+    <!--        &lt;!&ndash;<Button&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:onClick="click_GoSecondIntroView"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:background="@null"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+    <!--        &lt;!&ndash;android:text="Back"/>&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+</RelativeLayout>

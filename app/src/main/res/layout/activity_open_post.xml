@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:background="@color/white"
+tools:context=".timeline.OpenPostActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btn_backImgBtn_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+        <ImageButton
+            android:id="@+id/btn_backImgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_arrow" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/new_line_seperator">
+    </LinearLayout>
+
+
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--android:id="@+id/newtimeline_listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scrollbars="vertical" />-->
+
+    <ListView
+        android:id="@+id/newtimeline_listview"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/layout_bottom_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txt_comment_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:hint="Comment"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/timeline_sub_title_text"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_comment_camera"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/timeline_camera_icon"/>
+
+        <ImageButton
+            android:id="@+id/btn_comment_send"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/timeline_send_btn"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+</LinearLayout>

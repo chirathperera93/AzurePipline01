@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+
+
+        <shape android:padding="10dp" android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/color_EAEAEA" />
+            <solid android:color="@color/color_DBDBDB" />
+            <corners android:bottomLeftRadius="8dp" android:bottomRightRadius="8dp" android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+
+
+        </shape>
+
+    </item>
+
+    <item android:state_focused="true">
+        <shape android:padding="10dp" android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/color_EAEAEA" />
+            <solid android:color="@color/color_DBDBDB" />
+            <corners android:bottomLeftRadius="8dp" android:bottomRightRadius="8dp" android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+
+
+        </shape>
+    </item>
+
+    <item>
+        <shape android:padding="10dp" android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/color_EAEAEA" />
+            <solid android:color="@color/color_F4F4F4" />
+            <corners android:bottomLeftRadius="8dp" android:bottomRightRadius="8dp" android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+
+
+        </shape>
+    </item>
+</selector>
+
+
+    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:padding="10dp"-->
+    <!--    android:shape="rectangle">-->
+    <!--    <stroke-->
+    <!--        android:width="2dp"-->
+    <!--        android:color="@color/color_EAEAEA" />-->
+    <!--    <solid android:color="@color/color_F4F4F4" />-->
+    <!--    <corners-->
+    <!--        android:bottomLeftRadius="8dp"-->
+    <!--        android:bottomRightRadius="8dp"-->
+    <!--        android:topLeftRadius="8dp"-->
+    <!--        android:topRightRadius="8dp" />-->
+
+
+    <!--</shape>-->

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:layout_margin="4dp"
+    android:background="@color/white"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeForImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/upload_document_item_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="2dp" />
+
+        <ImageView
+            android:id="@+id/upload_document_item_delete_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:src="@drawable/close_payment" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeForText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scrollViewForTextArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:fadeScrollbars="false">
+
+            <TextView
+                android:id="@+id/textViewForTextArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </ScrollView>
+
+
+        <ImageView
+            android:id="@+id/upload_text_delete_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:src="@drawable/close_payment" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

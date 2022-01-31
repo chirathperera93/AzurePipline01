@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/partner_main_card"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/om_4_rectangle_corner_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp">
+
+
+        <LinearLayout
+            android:id="@+id/notification_data_image_linear_layout"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/partner_image"
+                android:layout_width="40dp"
+                android:layout_height="46dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/partner_discount_main"
+            android:layout_toEndOf="@+id/notification_data_image_linear_layout"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/partner_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:maxLines="1"
+                android:textColor="@color/color_3B3B3B"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/partner_open_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/color_41D38A"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/partner_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/partner_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/color_707070"
+                android:textSize="9sp" />
+
+            <LinearLayout
+                android:id="@+id/partner_payment_method_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal" />
+
+
+            <TextView
+                android:id="@+id/partner_time_restriction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/color_3082E2"
+                android:textSize="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/partner_discount_main"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/blue_rectangle_corners"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/partner_discount_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

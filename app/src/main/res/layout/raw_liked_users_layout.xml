@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:paddingRight="15dp"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/txt_liked_user_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/userpic"/>
+
+    <TextView
+        android:id="@+id/txt_liked_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:text="Sara Ranaweera"/>
+
+
+</LinearLayout>

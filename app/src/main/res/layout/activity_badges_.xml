@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/activity_water"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/white"
+android:orientation="vertical"
+tools:context="com.ayubo.life.ayubolife.map_challenges.Badges_Activity">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:id="@+id/top_menu_line"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_height="@dimen/top_logo_menheight">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lay_btnBack"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dp"
+            android:background="@color/white">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_backImgBtn"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_arrow"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/second_countraw"
+    android:layout_height="1sp">
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/latest_layout_design"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:text="Latest"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:text="Achievement"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/img_latest_badge"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:text="All"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:paddingBottom="30dp"
+            android:text="Achievements"/>
+        <GridView
+            android:id="@+id/sectionedGrid_list"
+            android:gravity="center"
+            android:numColumns="3"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="30dp"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <!--<ExpandableGridView-->
+            <!--android:id="@+id/grid_view_recyclerview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:numColumns="auto_fit"-->
+            <!--android:columnWidth="90dp"-->
+
+            <!--android:gravity="center"-->
+            <!--android:stretchMode="columnWidth" >-->
+
+        <!--</ExpandableGridView >-->
+
+    </LinearLayout>
+
+</LinearLayout>
+    <!--app:civ_border_width="2dp"-->

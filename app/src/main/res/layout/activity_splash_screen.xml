@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login__first"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.ayubo.life.ayubolife.login.LoginActivity_First">
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="72dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/logo_image"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/life_plus_logo" />-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="64dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/brand_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Powered by ayubolife"-->
+<!--            android:textColor="@color/theme_color"-->
+<!--            android:textSize="16dp" />-->
+
+<!--    </LinearLayout>-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/center_logo"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_horizontal"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:paddingTop="165dp">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/logo_mobile"-->
+    <!--            android:visibility="invisible" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/center_logo"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:layout_marginTop="30dp"-->
+    <!--            android:text=""-->
+    <!--            android:textSize="25sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txt_moblie_number"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:background="@android:color/transparent"-->
+    <!--            android:inputType="number"-->
+    <!--            android:text="Loading.."-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textColorHint="@color/toolbar_subtitle_color" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/btn_reload"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:layout_marginTop="50dp"-->
+    <!--            android:text="Refresh" />-->
+    <!--    </LinearLayout>-->
+
+</RelativeLayout>

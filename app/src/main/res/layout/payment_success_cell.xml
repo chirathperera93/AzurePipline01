@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/lay_one"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+
+android:background="@drawable/shadow_rounded_coner_four_sides"
+android:layout_marginStart="20dp"
+android:layout_marginEnd="20dp"
+android:layout_marginTop="10dp"
+android:orientation="horizontal">
+
+<TextView
+    android:id="@+id/tv_payment_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:padding="10dp"
+    android:textColor="@color/dark_text"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="15sp" />
+
+<TextView
+    android:id="@+id/tv_payment_value"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:layout_gravity="center_vertical"
+    android:maxLines="3"
+    android:padding="10dp"
+    android:textColor="@color/theme_color"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="15sp" />
+
+
+
+</LinearLayout>

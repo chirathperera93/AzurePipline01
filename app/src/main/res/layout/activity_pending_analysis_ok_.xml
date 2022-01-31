@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".janashakthionboarding.title_clicked.PendingAnalysisOkActivity">
+
+<LinearLayout
+    android:id="@+id/lay_back_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/top_menu_height"
+    android:layout_gravity="center_vertical"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:gravity="center_vertical">
+    <LinearLayout
+        android:id="@+id/btn_backImgBtn_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickToFinish_PendingAnalysisOkActivity"
+            android:id="@+id/btn_back_Button"
+            android:background="@drawable/back_arrow"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="150dp"
+    android:layout_below="@+id/lay_back_menu"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_user_name_pend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dear Jhone Doe"
+        android:fontFamily="sans-serif-black"
+        android:textSize="24sp"
+        android:textColor="@color/grey"/>
+    <TextView
+        android:id="@+id/txt_wanttopay_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="20dp"
+        android:text="@string/journey_towards"
+        android:fontFamily="sans-serif-black"
+        android:textSize="14sp"
+        android:textColor="@color/grey"/>
+
+
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="30dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+
+
+
+    <!--button.setBackgroundResource(R.drawable.chat_button_type_orange)-->
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        android:onClick="clickOk"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/reports_button_gradient_selected"
+        android:text="OK"/>
+
+</LinearLayout>
+</RelativeLayout>

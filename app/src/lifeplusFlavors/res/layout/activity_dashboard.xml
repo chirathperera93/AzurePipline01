@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/back_menu_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/top_logo_menheight"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/lay_reley"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/btn_backImgBtn_layout"
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+
+                                <ImageButton
+                                    android:id="@+id/btn_backImgBtn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/back_arrow" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/img_hemas_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/lay_reley"
+                            android:background="@drawable/logo_hemas"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--<include-->
+                <!--android:id="@+id/layout_back_to_home"-->
+                <!--layout="@layout/component_top_back_botton"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="@dimen/button_horizontal_margins"-->
+                <!--android:layout_marginStart="@dimen/button_horizontal_margins"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--app:layout_constraintBottom_toTopOf="@+id/layout_channel_doctor_button"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintHorizontal_bias="0.5"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/layout_favorite"-->
+                <!--app:layout_constraintVertical_chainStyle="packed" />-->
+
+                <TextView
+                    android:id="@+id/txt_activity_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:text="Expert Page Search"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_main_heading_title_normal" />
+
+                <include
+                    android:id="@+id/layout_search_button"
+                    layout="@layout/component_main_search_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/button_horizontal_margins"
+                    android:layout_marginEnd="@dimen/button_horizontal_margins"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_channel_doctor_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_favorite"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+
+            </LinearLayout>
+
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_doctors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_horizontal_margins"
+                android:layout_marginEnd="@dimen/button_horizontal_margins"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_menu_lay"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="4"
+                app:shimmer_demo_grid_child_count="4"
+                app:shimmer_demo_layout="@layout/component_dummy_doctor_image_row"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="#ffffff" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/layout_video_call_button"
+            layout="@layout/component_main_function_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            app:layout_constraintBottom_toTopOf="@+id/layout_report_review"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_favorite"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <!--    <include-->
+        <!--        android:id="@+id/layout_channel_doctor_button"-->
+        <!--        layout="@layout/component_main_function_buttons"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginEnd="@dimen/button_horizontal_margins"-->
+        <!--        android:layout_marginStart="@dimen/button_horizontal_margins"-->
+        <!--        android:layout_marginTop="16dp"-->
+        <!--        app:layout_constraintBottom_toTopOf="@+id/layout_report_review"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/layout_video_call_button"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.5"-->
+        <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+        <include
+            android:id="@+id/layout_report_review"
+            layout="@layout/component_main_function_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            app:layout_constraintBottom_toTopOf="@+id/layout_ask_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_video_call_button" />
+
+
+        <include
+            android:id="@+id/layout_ask_button"
+            layout="@layout/component_main_function_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_report_review" />
+
+        <include
+            android:id="@+id/layout_channel_doctor_button"
+            layout="@layout/component_main_function_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_horizontal_margins"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_horizontal_margins"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ask_button" />
+        <!--    <include-->
+        <!--        android:id="@+id/layout_report_button"-->
+        <!--        layout="@layout/component_main_function_buttons"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginBottom="8dp"-->
+        <!--        android:layout_marginEnd="@dimen/button_horizontal_margins"-->
+        <!--        android:layout_marginStart="@dimen/button_horizontal_margins"-->
+        <!--        android:layout_marginTop="16dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.5"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/layout_ask_button" />-->
+
+
+        <include
+            android:id="@+id/layout_error"
+            layout="@layout/component_error_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spn_user_dashboard"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/txt_heading_favorite"-->
+        <!--app:layout_goneMarginTop="16dp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/txt_dashboard_bookings"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:background="@drawable/book_button_background"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/my_bookings"-->
+        <!--android:textColor="@color/text_color_widget_primary"-->
+        <!--android:textSize="@dimen/text_tertiary_size"-->
+        <!--android:textStyle="bold"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

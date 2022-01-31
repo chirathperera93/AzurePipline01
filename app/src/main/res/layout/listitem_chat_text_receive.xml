@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginEnd="16dp"-->
+<!--    android:gravity="start"-->
+<!--    android:paddingBottom="8dp">-->
+
+<!--&lt;!&ndash;    <de.hdodenhof.circleimageview.CircleImageView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/chat_user_receive"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginEnd="2dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_toStartOf="@+id/txtTextReceiveLinearLayout"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/user_active"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:visibility="visible"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:civ_border_color="#FFFFFF"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:civ_border_width="1dp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/txtTextReceiveLinearLayout"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@drawable/new_chat_your_text_box"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:paddingLeft="12dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:paddingTop="12dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:paddingRight="12dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:paddingBottom="12dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/txtTextReceive"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="329dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:autoLink="web"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:fontFamily="@font/montserrat_medium"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:linksClickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingEnd="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="addsdasdas asdasdasdas asdasdasdassndnsj j dsdjoisjdfosjd sdjfisdjfis jsdoijfsodjfosdjfojsdoif soidjf oisd foisjdoifjsoidjfs doifjsoidjfiosjdiofjsio dfosjdiofjsiodjfoisjdf dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd asdasd sada da sda sdas das dasd asd asd asd asd asd"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/dark_text_title"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColorLink="@color/colorBlue"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="14sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/txtTimeTextRecieve"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="end"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/chat_text_date"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="@dimen/chat_text_date" />&ndash;&gt;-->
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+
+<!--</RelativeLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chat_user_receive"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user_active"
+        android:visibility="visible"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/txtTextReceiveLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/new_chat_your_text_box"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtTextReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:autoLink="web"
+            android:fontFamily="@font/montserrat_medium"
+            android:linksClickable="true"
+            android:textColor="@color/color_3B3B3B"
+            android:textColorLink="@color/colorBlue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtTimeTextRecieve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTextReceive"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/chat_text_date"
+            android:textSize="@dimen/chat_text_date" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

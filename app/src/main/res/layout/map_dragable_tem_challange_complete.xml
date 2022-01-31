@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_icon_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/originaln" />
+
+
+    <TextView
+        android:id="@+id/txt_complete_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="You have reached"
+        android:textColor="@color/grey"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_reached_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_complete_heading"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+
+    <TextView
+        android:id="@+id/com_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_reached_city"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp"
+        android:text="Completed"
+        android:textColor="@color/grey"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/com_text"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="In "
+            android:textColor="@color/black_transparent_50"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_completed_days"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="21"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/txt_comp_days_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text=" Days"
+            android:textColor="@color/black_transparent_50"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

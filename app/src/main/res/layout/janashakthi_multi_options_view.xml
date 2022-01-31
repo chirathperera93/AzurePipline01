@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:id="@+id/main_lay_new_button_view"
+    android:orientation="horizontal"
+    android:background="@drawable/reports_multioptions_button_unselected">
+
+
+    <ImageView
+        android:id="@+id/img_new_button_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/question_selected_tick_white" />
+
+    <TextView
+        android:id="@+id/txt_multioption_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center_vertical"
+        android:textColor="@color/gery_text"
+        android:text="asdasd"/>
+
+
+
+
+</LinearLayout>

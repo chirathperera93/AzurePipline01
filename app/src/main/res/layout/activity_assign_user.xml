@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@color/white"
+tools:context=".reports.activity.AssignUserActivity">
+
+
+<!--Back Button -->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/top_menu_height"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical">
+    <LinearLayout
+        android:id="@+id/btn_backImgBtn_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back_Button"
+            android:background="@drawable/back_arrow"/>
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/schedlue_cell_desc">
+</LinearLayout>
+
+
+<!--Add a Goal Heading -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family "
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/goal_grey_small_text"
+            android:textSize="@dimen/goals_header_small_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Members"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textColor="@color/goal_grey_big_text"
+            android:textSize="@dimen/goals_header_big_text" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_add_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_add_member1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add "
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/theme_color"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txt_add_member2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New "
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/theme_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_familymemeber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+<!-- List View -->
+<!--<ListView-->
+    <!--android:id="@+id/list_view_selectfamilymem"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:divider="@color/notificationbar_color"-->
+    <!--android:layout_height="wrap_content" />-->
+
+</LinearLayout>
