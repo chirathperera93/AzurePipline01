@@ -1,100 +1,349 @@
-apply plugin: 'com.android.application'
-
-android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
-    defaultConfig {
-        applicationId "com.example.android.architecture.blueprints.todomvp"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
-    }
-
-    buildTypes {
-        debug {
-            minifyEnabled true
-            // Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
-            useProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
-        }
-
-        release {
-            minifyEnabled true
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
-        }
-    }
-
-    // If you need to add more flavors, consider using flavor dimensions.
-    productFlavors {
-        mock {
-            applicationIdSuffix = ".mock"
-        }
-        prod {
-
-        }
-    }
-
-    // Remove mockRelease as it's not needed.
-    android.variantFilter { variant ->
-        if(variant.buildType.name.equals('release')
-                && variant.getFlavors().get(0).name.equals('mock')) {
-            variant.setIgnore(true);
-        }
-    }
-
-    // Always show the result of every unit test, even if it passes.
-    testOptions.unitTests.all {
-        testLogging {
-            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
-        }
-    }
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.huawei.agconnect'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'com.google.firebase.crashlytics'
 }
 
-/*
- Dependency versions are defined in the top level build.gradle file. This helps keeping track of
- all versions in a single place. This improves readability and helps managing project complexity.
- */
+
+
+
+android {
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    signingConfigs {
+//        debug {
+//            storeFile file("debug.keystore")
+//        }
+        release {
+//            storeFile file("debug.keystore")
+            storeFile file("ayubolifekey.jks")
+            storePassword "ayubolife"
+            keyAlias "ayubolife"
+            keyPassword "ayubolife"
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+    useLibrary 'org.apache.http.legacy'
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+
+    }
+
+    defaultConfig {
+        applicationId "com.ayubo.life"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 114
+        versionName "2.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", '"https://livehappy.ayubo.life/"'
+        multiDexEnabled = true
+        ndk {
+            abiFilters "armeabi-v7a", "x86", 'x86_64', 'arm64-v8a'
+        }
+    }
+
+//    buildFeatures {
+//        viewBinding true
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.release
+//            buildConfigField "Boolean", "REPORT_CRASH", true
+            //  debuggable true
+
+        }
+        debug {
+            signingConfig signingConfigs.release
+
+            //    buildConfigField "Boolean", "REPORT_CRASH", false
+            //  debuggable true
+        }
+    }
+
+
+    flavorDimensions "version"
+    productFlavors {
+        def appVersionCode = 268
+        def appVersionName = "8.5.1"
+        ayuboFlavors {
+            dimension "version"
+            applicationIdSuffix ".ayubolife"
+            versionCode appVersionCode
+            versionName appVersionName
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+
+            copy {
+                from 'src/ayuboFlavors/'
+                include '*.json'
+                into '.'
+            }
+        }
+
+        lifeplusFlavors {
+            dimension "version"
+            applicationIdSuffix ".lifeplus"
+            versionCode appVersionCode
+            versionName appVersionName
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+
+//            copy {
+//                from 'src/lifeplusFlavors/'
+//                include '*.json'
+//                into '.'
+//            }
+
+        }
+
+        hemasFlavors {
+            dimension "version"
+            applicationIdSuffix ".hemas"
+            versionCode 29
+            versionName "3.7"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+
+//            copy {
+//                from 'src/hemasFlavors/'
+//                include '*.json'
+//                into '.'
+//            }
+
+        }
+
+        seychellesFlavors {
+            dimension "version"
+            applicationIdSuffix ".seychelles"
+            versionCode 2
+            versionName "1.0"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+//            copy {
+//                from 'src/seychellesFlavors/'
+//                include '*.json'
+//                into '.'
+//            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+
+        exclude 'META-INF/rxjava.properties'
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion '23.1.7779620'
+
+//    configurations {
+//        all {
+//
+//            exclude module: 'httpclient'
+//        }
+//    }
+}
+
 dependencies {
-    // App's dependencies, including test
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
-    compile "com.google.guava:guava:$rootProject.guavaVersion"
 
-    // Dependencies for local unit tests
-    testCompile "junit:junit:$rootProject.ext.junitVersion"
-    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
-    testCompile "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/zbar.jar')
 
-    // Android Testing Support Library's runner and rules
-    androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
-    androidTestCompile "com.android.support.test:rules:$rootProject.ext.runnerVersion"
+    implementation files('libs/stickygridheaders.jar')
 
-    // Dependencies for Android unit tests
-    androidTestCompile "junit:junit:$rootProject.ext.junitVersion"
-    androidTestCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
-    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
-    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation 'androidx.room:room-runtime:2.3.0'
+    // optional - RxJava support for Room
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    // Espresso UI Testing
-    androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // Resolve conflicts between main and test APK:
-    androidTestCompile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
-    androidTestCompile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    androidTestCompile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    androidTestCompile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    androidTestCompile "com.android.support:design:$rootProject.supportLibraryVersion"
+
+
+
+    //FIREBASE
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.firebase:firebase-core:19.0.2'
+    implementation 'com.google.firebase:firebase-config:21.0.1'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation "com.google.firebase:firebase-firestore:24.0.0"
+
+
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.gms:play-services-fitness:20.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation "com.google.android.gms:play-services-location:18.0.0"
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.2'
+
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation "com.google.dagger:dagger:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$dagger"
+
+    implementation 'com.huawei.agconnect:agconnect-core:1.6.0.300'
+    implementation "com.huawei.hms:health:5.0.4.300"
+    implementation "com.huawei.hms:maps:5.0.2.300"
+    implementation 'com.huawei.agconnect:agconnect-crash:1.6.0.300'
+
+    implementation 'com.facebook.android:facebook-android-sdk:5.0.0'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //network
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //RX
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.11.0'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
+
+    //SIGNALR
+    implementation 'com.microsoft.signalr:signalr:3.1.3'
+    implementation 'org.slf4j:slf4j-jdk14:1.7.25'
+    implementation 'org.java-websocket:Java-WebSocket:1.3.0'
+
+    //APACHE
+//    implementation 'org.apache.httpcomponents:httpcore:4.4.14'
+//    implementation 'org.apache.httpcomponents:httpmime:4.5.6'
+
+    //noinspection DuplicatePlatformClasses
+    implementation 'org.apache.httpcomponents:httpclient:4.5.3'
+    api 'org.apache.httpcomponents:httpcore:4.4.6'
+    api 'org.apache.httpcomponents:httpmime:4.3.6'
+
+    //JWT
+    implementation 'com.auth0:java-jwt:3.18.2'
+
+    //TWILIO
+    implementation 'com.twilio:video-android:5.0.0'
+    implementation "com.koushikdutta.ion:ion:$ion"
+
+
+
+
+
+    //KOTLIN
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //CHART DATA
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation 'org.jsoup:jsoup:1.14.3'
+
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
+//    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.airbnb.android:lottie:2.5.4'
+
+    implementation 'com.github.shxdos:AndroidPdfViewer:2.7.0-beta.2'
+
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+
+
+
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+
+    implementation 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3'
+
+    implementation 'com.splitwise:tokenautocomplete:2.0.8@aar'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.7'
+
+    implementation 'com.github.smart-fun:XmlToJson:1.4.4'
+
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+
+    implementation 'com.github.florent37:viewanimator:1.0.5'
+
+    implementation 'com.github.naman14:TAndroidLame:1.1'
+
+    implementation 'com.kbeanie:multipicker:1.1.31@aar'
+
+    implementation 'lk.payhere:androidsdk:2.0.33'  // PayHere SDK
+
+
+
+    implementation 'org.michaelbel:bottomsheet:1.2.3'
+
+    implementation 'com.github.prolificinteractive:material-calendarview:1.6.0'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+
+
 }

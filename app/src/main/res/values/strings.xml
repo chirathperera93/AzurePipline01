@@ -1,59 +1,488 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (C) 2015 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <resources>
-    <string name="app_name">TO-DO-MVP</string>
-    <string name="add_task">New TO-DO</string>
-    <string name="edit_task">Edit TO-DO</string>
-    <string name="task_marked_complete">Task marked complete</string>
-    <string name="task_marked_active">Task marked active</string>
-    <string name="loading_tasks_error">Error while loading tasks</string>
-    <string name="completed_tasks_cleared">Completed tasks cleared</string>
-    <string name="menu_filter">Filter</string>
-    <string name="menu_clear">Clear completed</string>
-    <string name="menu_delete_task">Delete task</string>
-    <string name="navigation_view_header_title">TO-DOs</string>
-    <string name="title_hint">Title</string>
-    <string name="description_hint">Enter your TO-DO here.</string>
-    <string name="empty_task_message">TO DOs cannot be empty</string>
-    <string name="successfully_saved_task_message">TO-DO saved</string>
-    <string name="list_title">TO-DO List</string>
-    <string name="statistics_title">Statistics</string>
-    <string name="statistics_no_tasks">You have no tasks.</string>
-    <string name="statistics_active_tasks">Active tasks:</string>
-    <string name="statistics_completed_tasks">Completed tasks:</string>
-    <string name="statistics_error">Error loading statistics.</string>
-    <string name="no_data">No data</string>
-    <string name="loading">LOADING</string>
 
-    <string-array name="list_tasks_array">
-        <item>@string/nav_all</item>
-        <item>@string/nav_active</item>
-        <item>@string/nav_completed</item>
+    <string name="app_name">ayubo.life</string>
+
+    <string name="animatetext_welcome">Welcome to ayubo.life, your health and wellness companion</string>
+    <string name="animatetext_entername">What is your name?</string>
+    <string name="animatetext_thankyou">Thank you</string>
+    <string name="animatetext_hi">Hi</string>
+    <string name="animatetext_entermobile">, simply enter your mobile number to register with ayubo.life</string>
+    <string name="animatetext_summery">, we will verify your mobile number by sending an sms. Please wait..</string>
+
+    <!--<string name="google_api_key">AIzaSyCDcekAUU9NDm88y4QU6wX-g0SjQovVq7I</string>-->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel_ayubo_life</string>
+
+    <string name="error_msg_unknown">error msg unknown</string>
+    <string name="error_msg_noinnsight">Looks like you do not have enough goals to make a summary of your progress.</string>
+    <string name="error_msg_noinnsight2">Add more goals to get a summary.</string>
+
+    <string name="did_you_achive_this_goal_small">Was this</string>
+    <string name="did_you_achive_this_goal_large">Goal achieved ?</string>
+
+    <string name="in_vehicle">In a vehicle</string>
+    <string name="on_bicycle">On a bicycle</string>
+    <string name="on_foot">On foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown">Unknown activity</string>
+    <string name="walking">Walking</string>
+    <string name="unidentifiable_activity">Unidentifiable activity: %1$d</string>
+    <string name="hint_enter_your_name">Enter your name</string>
+    <string name="hint_enter_your_mobile">Enter mobile number</string>
+
+    <string name="btn_text_next">Next</string>
+
+    <string name="toast_gender_empty">Please select gender</string>
+    <string name="toast_birthday_empty">Birthday can not be empty</string>
+
+    <string name="toast_birthday_invalid">Please select valid birthday</string>
+
+    <string name="toast_email_empty">Email can not be empty</string>
+
+
+    <string name="terms_conditions"><![CDATA[I agreed to Terms & Conditions]]></string>
+
+
+    <string name="toast_firstname_empty">First name can not be empty</string>
+    <string name="toast_firstname_onlycharacters">Name can only contains characters</string>
+    <string name="toast_lastname_empty">Last name can not be empty</string>
+    <string name="toast_lastname_onlycharacters">Last name can only contains characters</string>
+
+    <string name="toast_no_internet">Unable to detect an active internet connection</string>
+    <string name="toast_enter_valid_phonenumber">Please enter valid mobile number</string>
+    <string name="toast_enter_name">Please enter name</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!--    Life Plus App ID-->
+    <string name="facebook_app_id">261683904975753</string>
+    <!--    Hemas App ID-->
+    <!--    <string name="facebook_app_id">1929466503948415</string>-->
+    <!-- 1929466503948415  1929466503948415-->
+    <!-- Navigation Drawer menu labels -->
+
+    <string name="topmenu_home">Home</string>
+    <string name="topmenu_gallery">Blog</string>
+    <string name="topmenu_challenge">CHALLENGES</string>
+    <string name="topmenu_history">History</string>
+    <string name="sidemenu_home">Home</string>
+    <!--    <string name="sidemenu_promocode">Promo Code</string>-->
+    <string name="sidemenu_promocode">Community Key</string>
+    <string name="sidemenu_badges">Badges</string>
+    <string name="sidemenu_share">Invite Friends</string>
+    <string name="sidemenu_coporate">Join a Community</string>
+    <string name="sidemenu_connect">Connect Devices</string>
+    <string name="sidemenu_qrcode">Scan QR Code</string>
+    <string name="sidemenu_insurance">Insurance</string>
+
+    <string name="sidemenu_help">Help and Feedback</string>
+    <string name="sidemenu_hos_info">Hospital Information</string>
+    <string name="sidemenu_about">About</string>
+    <string name="sidemenu_history">History</string>
+    <string name="sidemenu_payment_history">Payments</string>
+    <string name="sidemenu_profile">Profile</string>
+    <string name="sidemenu_lifepoints">.life Points</string>
+    <string name="sidemenu_payments">Payments</string>
+    <string name="sidemenu_subscriptions">Subscriptions</string>
+
+
+    <string name="txt_register">Live Happy :)</string>
+    <string name="hint_entermobilenumber">Enter mobile number</string>
+
+    <string name="topic_body">BODY</string>
+    <string name="body_text_details">Each one of us is blessed with a unique body and we have the opportunity to get the best out of it. Live Happy :)</string>
+    <string name="body_text_details_sub">Some of the apps and wearables you can connect</string>
+    <string name="body_text_details_mind">Work. Kids. Studies. Costs. Errands. People. Society. Politicians. All this topple the balance in our mind and create stress. Let’s work together to regain control, stay at peace, stay focused. Live happy :) </string>
+    <string name="topic_mind">MIND</string>
+    <string name="body_text_details_food">It’s a necessity and an indulgence! Let’s learn to balance it while enjoying the best nature has to offer. Live Happy :)</string>
+    <string name="topic_food">FOOD</string>
+    <string name="topic_health">HEALTH</string>
+    <string name="body_text_details_health">Sometimes things go wrong. Prevention is the best, early attention is the next best. We are here to ensure your healthcare needs are at your fingertips. Live Happy :)</string>
+
+
+    <string name="terms_para1">Ayubo.life is committed to respecting the privacy rights of users of the Ayubo.life mobile application. This Privacy Policy is to explain its information collection and use practices and the protection of your information when you visit and use the Ayubo.life Website and mobile Application.</string>
+
+    <string name="terms_para2">This Privacy Policy is only applicable to the Ayubo.life Website and Applications and does not apply to any websites or applications that are owned or operated by third parties ("Third-Party Websites/Applications"), which may have data collection, storage and use practices and policies that differ materially from this Privacy Policy. </string>
+
+    <string name="terms_para3">Ayubo.life collects information from users upon registration on its website and in connection with the use of any of Ayubo.life applications.
+By registering, the user explicitly agrees that Ayubo.life shall have the right to use all automatically collected personally identifiable information.
+Ayubo.life does not pass on personally identifiable information to third parties, except as required by law or with the explicit consent of the user.
+Ayubo.life implements all reasonable measures to prevent the unauthorized access by third parties to saved details.
+The user explicitly consents to the storage and use of non-personally identifiable information for purposes of in-app advertising
+Health data will never be shared with advertisers or with any similar agencies.</string>
+
+    <string name="terms_para4">Ayubo.life allows the users to login through the facebook credentials, in such instances Ayubo.life fetch the users public profile with the consent of the user from Facebook and store them in the Ayubo.life platform for identification purposes
+If users do not want to have the respective social media-platform connected with the Ayubo.life mobile application, users must log out from their social media-account.</string>
+
+    <string name="terms_para5">If Ayubo.life decides to change its privacy policy, it will post those changes on this page. This policy was last modified on 01 Jan, 2017.</string>
+    <string name="terms_para6">BY USING THE WEBSITE AND/OR APPLICATIONS, YOU REPRESENT AND WARRANT THAT YOU HAVE READ AND UNDERSTOOD, AND AGREE TO THE TERMS OF, THIS PRIVACY POLICY. IF YOU DO NOT UNDERSTAND OR DO NOT AGREE TO BE BOUND BY THIS PRIVACY POLICY, YOU MAY NOT USE THE WEBSITE AND/OR APPLICATION.</string>
+
+    <string-array name="title_array">
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Miss</item>
+        <item>Mast</item>
+        <item>Dr</item>
+        <item>Baby</item>
     </string-array>
-    <string name="nav_all">All</string>
-    <string name="nav_active">Active</string>
-    <string name="nav_completed">Completed</string>
-    <string name="label_all">All TO-DOs</string>
-    <string name="label_active">Active TO-DOs</string>
-    <string name="label_completed">Completed TO-DOs</string>
-    <string name="no_tasks_all">You have no TO-DOs!</string>
-    <string name="no_tasks_active">You have no active TO-DOs!</string>
-    <string name="no_tasks_completed">You have no completed TO-DOs!</string>
-    <string name="no_tasks_add">Add a TO-DO item +</string>
-    <string name="refresh">Refresh</string>
+
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Settings</item>
+
+    </string-array>
+
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="empty_content_description">Text…</string>
+    <!-- Dialogs strings. -->
+
+
+    <string name="program_setting_alert_active">Restarting your program will allow you to follow your program from the beginning.</string>
+    <string name="program_setting_alert_resume">Your program will be resumed.</string>
+    <string name="program_setting_alert_pause">Your program will be paused. Be sure to resume it at whatever time.</string>
+    <string name="program_setting_alert_inactive">Deactivate will completely disable the program from further viewing. Reactivation of the program may require you to resubscribe</string>
+
+
+    <!-- Errors strings. -->
+
+    <string name="no_internet_connection">No active internet connection</string>
+    <string name="servcer_not_available">Server is temporarily unavailable</string>
+    <string name="service_not_available">Service is temporarily unavailable</string>
+
+    <string name="field_name_user_name">User name</string>
+    <string name="field_name_chat_room_name">Chat room name</string>
+
+    <string name="error_name_must_not_contain_special_characters_from_app">%1$s must contain 3 &#8212; %2$s alphanumeric Latin characters without space, the first char must be a letter</string>
+
+    <!--menu-->
+
+
+    <!--action bar-->
+
+
+    <string name="text_push_notification_message">"%s is calling you"</string>
+
+
+    <!-- Settings strings. -->
+
+    <integer name="pref_default_int_value">0</integer>
+
+    <!--Call Settings-->
+
+    <string name="no_report_here">It looks like there are no reports here</string>
+    <string name="no_messages_here">No messages available</string>
+
+    <string name="sender_id">761750217637</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">todo</string>
+    <string name="help_andfeed_new">Please call our support line on 0117988788 for further assistance</string>
+    <string name="help_lifeplus">Please e-mail us at support@lifeplus.com.bd.</string>
+
+
+    <!--Aybo step count -->
+    <string name="goal_reached_notification">Goal reached! %s steps and counting</string>
+    <string name="notification_text">%s steps</string>
+    <string name="your_progress_will_be_shown_here_soon">Your progress will be shown here soon</string>
+    <string name="ispaused">Ayubo StepCounter is paused</string>
+    <string name="notification_title">Counting</string>
+    <!--Aybo step count -->
+
+
+    <!-- Channeling -->
+    <string name="no_connection">No Internet Connection Available!</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- dummy strings -->
+    <string name="dummy_doctor">Dr. Sarath Silva</string>
+    <string name="dummy_day">#4</string>
+    <string name="dummy_date">Monday, Dec 2018</string>
+    <string name="dummy_week_short">Mon</string>
+    <string name="dummy_specialty">Endocrinologist</string>
+    <string name="dummy_time">6.00 AM - 6.00 PM</string>
+    <string name="dummy_location">Hemas Hospital</string>
+    <string name="dummy_price">LKR 0.00</string>
+    <string name="dummy_in_min">20 mins</string>
+
+    <!-- Dashboard -->
+    <string name="button_name">Button Name</string>
+    <string name="video_call_title">Make a Video Call</string>
+    <string name="channel_doctor_title">Channel a Doctor</string>
+    <string name="review_a_report">Review a Report Online</string>
+    <string name="ask_title">Ask a Question</string>
+    <string name="video_call_message">Select this option to book a video call with a doctor/expert</string>
+    <string name="channelling_message">Select this option to channel a doctor/expert</string>
+    <string name="ask_message">Select this option to chat with a doctor/expert</string>
+
+    <string name="revier_message">Select this option to get a report review done online</string>
+
+    <string name="add_new">Add new</string>
+    <string name="doctor_speciality">Doctor / Speciality</string>
+
+    <!-- Doctor info view -->
+    <string name="video_short_title">Video</string>
+    <string name="video_consultation">Video Consultation</string>
+    <string name="channel">Channel</string>
+    <string name="ask">Ask</string>
+    <string name="review">Review</string>
+    <string name="select_hospital">Select Hospital</string>
+    <string name="added_favourite">%s Added to your favourites</string>
+    <string name="remove_favourite">%s Removed from your favourites</string>
+    <string name="failed_add_favourite">Failed to add favorite</string>
+    <string name="failed_remove_favourite">Failed to remove favorite</string>
+
+    <!-- Visit Doctor View-->
+    <string name="visit_a_doctor_one">Visit a Doctor/Expert</string>
+    <string name="visit_a_doctor_two">Doctor/Expert</string>
+    <string name="doctor">Doctor</string>
+    <string name="specialty">Specialty</string>
+    <string name="location">Location</string>
+    <string name="reference">Reference</string>
+    <string name="hospital">Hospital</string>
+
+    <string name="appointment_date">Appointment Date</string>
+    <string name="powered_by">Powered by</string>
+    <string name="search">Search</string>
+    <string name="any">Any</string>
+    <string name="search_doctor_expert">Select doctor/expert here</string>
+    <string name="no_search_criteria">Please specify a search criteria</string>
+
+    <!-- Search -->
+    <string name="search_doctor">Search a Doctor/Expert</string>
+    <string name="search_specialty">Search a Specialty</string>
+    <string name="search_location">Search a Location</string>
+    <string name="search_here">Search here...</string>
+    <string name="no_result">No search results</string>
+
+    <!-- Error messages -->
+    <string name="server_error">An Error Occurred</string>
+    <string name="try_again">Try Again</string>
+
+    <!-- Schedule Activity -->
+    <string name="title_activity_schedule">ScheduleActivity</string>
+    <string name="calendar">Calendar</string>
+    <string name="book">Book</string>
+    <string name="view_more">View more</string>
+    <string name="special_note">Note : </string>
+    <string name="select_to_change_hospital">Select to change hospital</string>
+    <string name="no_schedules">No Sessions Available</string>
+
+    <!-- Details view -->
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="type">Type</string>
+    <string name="doctor_note">Doctor Note :</string>
+
+    <!-- video request -->
+    <string name="session">Session</string>
+    <string name="book_now">Book Now</string>
+    <string name="book_later">Book Later</string>
+    <string name="available_in">Available in</string>
+
+    <!-- date/time strings -->
+    <string name="today">Today</string>
+
+    <!-- pay activity -->
+    <string name="add_to_dialog_bill">Add to Dialog bill</string>
+    <string name="online_payment">Online payment</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="error_no_payment_method">Please specify a payment method</string>
+
+    <!-- Source Activity-->
+    <string name="note_message_source">The above fee excludes taxes and booking fee</string>
+
+    <!-- User Activity-->
+    <string name="title">Title *</string>
+    <string name="first_name_require">First name *</string>
+    <string name="last_name_require">Last name *</string>
+    <string name="phone">Phone *</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="enter_name">Please enter the name</string>
+    <string name="enter_phone">Please enter the phone number</string>
+    <string name="invalid_phone">Please specify a valid mobile number</string>
+    <string name="enter_age">Please enter the Age</string>
+    <string name="enter_valid_age">Please enter the valid Age</string>
+    <string name="profile_update_success">Profile updated sucessfully</string>
+    <!-- digit entry dialog activity -->
+    <string name="submit">Submit</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="enter_sms">Please enter your verification code</string>
+    <string name="resend"><u>Resend</u></string>
+
+    <!-- result activity -->
+    <string name="thank_you">Thank you</string>
+    <string name="result_message">Appointment successfull</string>
+    <string name="ok">OK</string>
+    <string name="doctor_result">Doctor/Expert:</string>
+    <string name="date_result">Date:</string>
+    <string name="time_result">Time slot:</string>
+    <string name="appointment_result">Appointment #:</string>
+    <string name="location_result">Location:</string>
+
+    <!--upload activity-->
+    <string name="add_notes">Add Notes</string>
+
+    <!-- history view -->
+    <string name="upcoming_appointments">Upcoming Appointments</string>
+    <string name="today_appointments">Today Appointments</string>
+    <string name="previous_appointment">Previous Appointments</string>
+    <string name="confirm_cancel">Are you sure you want cancel this appointment?</string>
+    <string name="source">Source : Doc990</string>
+    <string name="history_location_video">Location : Video</string>
+    <string name="support_line">For cancellations call our support line on 0720â€“111-222</string>
+
+    <!-- video session view -->
+    <string name="hours">Hours</string>
+    <string name="meridiem">AM</string>
+    <string name="make_a">Make a</string>
+    <string name="video_call">Video Call</string>
+    <string name="sessions_listed">Sessions listed for the next 30 days</string>
+
+
+    <!-- Hospital Contact Info -->
+    <string name="hos_wattala_name">Hemas Hospital Wattala </string>
+    <string name="hos_wattala_add1">389, Negambo Road</string>
+    <string name="hos_wattala_add2">Wattala </string>
+    <string name="hos_wattala_add3">Sri Lanka </string>
+    <string name="hos_wattala_phone">+94 117888888</string>
+
+
+    <string name="hos_thalawathugoda_name">Hemas Hospital Thalawathugoda</string>
+    <string name="hos_thalawathugoda_add1">647/2A Pannipitiya Road</string>
+    <string name="hos_thalawathugoda_add2">Thalawathugoda </string>
+    <string name="hos_thalawathugoda_add3">Sri Lanka </string>
+    <string name="hos_phone">+94 117888888</string>
+    <string name="hos_web">www.hemashospitals.com</string>
+
+    <string name="no_report_chart_data_error">There seems to be insufficient data to draw your graph.</string>
+    <string name="details_about_asisgning_report">This report is unassigned. You can assign this report to yourself or you can assign this report to a family member on your list. Once this report is assigned, it will be categorized under the assigned member.</string>
+
+    <string name="title_failed">Failed</string>
+    <string name="msg_upload_failed">Failed uploading</string>
+    <string name="btn_text_ok">OK</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="msg_upload_confirm">Are you sure you want to send this recording ?</string>
+    <string name="btn_text_yes">Yes</string>
+    <string name="btn_text_no">No</string>
+
+    <string name="btn_text_camera">Camera</string>
+    <string name="btn_text_take_gallery">Gallery</string>
+    <string name="btn_text_cancel">Cancel</string>
+    <string name="did_you_know_did_you_know_did_you_know_did_you_know_did_you_know_did_you_know_did_you_know">Did you know Did you know Did you know Did you know Did you know Did you know Did you know?</string>
+    <string name="title_height">Height</string>
+    <string name="pay_trail_text_1">Ask expert is an unique chat service, which gives you the privilege of unlimited access to wide-ranging medical professionals through a chat messenger.</string>
+    <string name="pay_trail_text_2">Get your quiries and concerns answered by the right professionals at the right time.</string>
+    <string name="janashakthi_welcome_desc">In order for our experts to proceed in setting effective health and wellness goals for you to start with, we require some medical data for our experts to set the right goals for you.\n\nYou can also proceed with your questionnaire but your health and wellness goals might not be as effective and accurate.
+</string>
+    <string name="What_would_you">What would you like to do?</string>
+    <string name="journey_towards">Your goals are currently being set for your wellness journey. You will be notified once your goals are ready for your viewing. Stay tuned!</string>
+
+    <string name="i_agree">I Agree</string>
+    <string name="program_no_today_data">test</string>
+    <string name="enter">Enter</string>
+
+
+    <!--Payments Module-->
+    <string name="wrong_pin_number">Wrong pin number</string>
+    <string name="pin_number">Pin Number</string>
+    <string name="dialog_number">Mobile Number</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="service_loading_fail">Failed loading data</string>
+    <string name="payment">Payment</string>
+    <string name="options">Options</string>
+    <string name="confirmations">Confirmation</string>
+    <string name="add_dialog_number">Add more</string>
+    <string name="payment_incomplete">Payment Incomplete</string>
+    <string name="your_payment_is_was_not_successfull">Your payment is was not successfull</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="retry">Retry</string>
+    <string name="payment_successfull">Payment Successfull</string>
+    <string name="date">Date</string>
+    <string name="done">Done</string>
+    <string name="upload_report_text">Please upload any documents related to your condition such as (Reports, prescriptions, scans and referral letters etc.)</string>
+
+
+    <string name="error_retrieving_access_token">Error retrieving token</string>
+
+    <string name="by_clickiing_refund_policy">By clicking “Continue” you agree to our Terms &amp; Conditions and Refund Policy.</string>
+    <string name="my_policies">My Policies</string>
+    <string name="walk_and_win">WALK &amp; WIN</string>
+    <string name="refresh_now"><u>Refresh Now !</u></string>
+    <string name="you_are_about_to_join_the_daily_walk_win_challenge">You are about to join the Daily Walk &amp; Win Challenge</string>
+    <string name="you_are_about_to_join_the_weekly_walk_win_challenge">You are about to join the Weekly Walk &amp; Win Challenge</string>
+    <string name="you_are_about_to_join_the_monthly_walk_win_challenge">You are about to join the Monthly Walk &amp; Win Challenge</string>
+    <string name="terms_and_conditions"><u>Terms and Conditions</u></string>
+    <string name="view_calendar"><u>View Calendar</u></string>
+    <string name="show_less"><u>Show Less</u></string>
+    <string name="my_badges"><u>My Badges</u></string>
+    <string name="sample_link"><u>Sample Link</u></string>
+    <string name="show_more">Show More</string>
+    <string name="back_to_home"><u>Back to home</u></string>
+    <string name="get_started_description_life_plus">Let’s make Bangladesh a healthier nation together. Meet your daily, weekly, monthly step targets and stand a chance to win and receive attractive deals.</string>
+    <string name="get_started_text">Get Started</string>
+    <string name="enter_mobile_description_life_plus">Let’s make Bangladesh a healthier nation together. Meet your daily, weekly, monthly step targets and stand a chance to win and receive attractive deals.</string>
+    <string name="enter_pin_description_life_plus">Welcome to the platform. You will get verification code to your mobile within few seconds and please enter it bellow to process registration.</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="get_started_description_ayubo_life">Let’s make Sri Lanka a healthier nation together. Each one of us is blessed with a unique body and we have the opportunity to get the best out of it.</string>
+    <string name="enter_mobile_description_ayubo_life">Let’s make Sri Lanka a healthier nation together. Each one of us is blessed with a unique body and we have the opportunity to get the best out of it.</string>
+    <string name="enter_pin_description_ayubo_life">Let’s make Sri Lanka a healthier nation together. Each one of us is blessed with a unique body and we have the opportunity to get the best out of it.</string>
+    <string name="view_all_steps"><u>View All Steps</u></string>
+    <string name="incoming_call_action">incoming call action</string>
+    <string name="change_address"><u>Change Address</u></string>
+    <string name="submit_your_medicine">Submit your prescription</string>
+    <string name="pick_it_from_your_previous_orders">Pick it from your previous orders</string>
+    <string name="create_new_order">Create new order</string>
+    <string name="snap">Snap</string>
+    <string name="photo">Photo</string>
+    <string name="file">File</string>
+    <string name="cancel_order"><u>Cancel Order</u></string>
+    <string name="view_history"><u>Show  All</u></string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="special_notes">Special Notes</string>
+    <string name="delivery_location">Delivery location</string>
+    <string name="partner">Partner</string>
+    <string name="payment_details">Medicine Cost</string>
+    <string name="total">Total</string>
+    <string name="calculating">Calculating…</string>
+    <string name="order_medicine_waiting">order medicine waiting</string>
+    <string name="place_order">Place Order</string>
+    <string name="get_quote">Get Quote</string>
+    <string name="track_order">Track Order</string>
+    <string name="arrow_round_back">arrow_round_back</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="register">Register</string>
+    <string name="privacy_policy_underline"><u>Privacy Policy</u></string>
+    <string name="by_continuing_i_confirm_that_i_have_read_and_agree_to_the">By continuing, I confirm that I have read and agree to the</string>
+    <string name="not_now"><u>Not now</u></string>
+    <string name="there_s_no_previous_orders_yet">There’s no previous orders yet</string>
+    <string name="nic">NIC</string>
+    <string name="update">Update</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+    <string name="my_profile">My Profile</string>
+    <string name="arrowRoundBack">arrowRoundBack</string>
+    <string name="payments_method">Payments method</string>
+    <string name="cancel_payment"><u>Cancel Payment</u></string>
+    <string name="change_payment">Change Payment</string>
+    <string name="my_payments_method">My payment methods</string>
+    <string name="_0117_988_788"><u>0117 988 788</u></string>
+    <string name="read_more"><u>Read More…</u></string>
+    <string name="how_to_use_your_life_points"><u>How to use your life points</u></string>
+    <string name="city">City</string>
+    <string name="view_step_detail">View Step Detail</string>
+    <string name="corporate_email">Corporate Email</string>
+    <string name="go_back"><u>Go back</u></string>
+    <string name="click_here"><u>Click here</u></string>
+
 
 </resources>

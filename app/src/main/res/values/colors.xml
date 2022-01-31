@@ -1,26 +1,288 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (C) 2015 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#455A64</color>
-    <color name="colorPrimaryDark">#263238</color>
-    <color name="colorAccent">#D50000</color>
+    <color name="colorPrimary">#ff860b</color>
+    <color name="colorPrimaryDark">#ff860b</color>
+    <color name="colorAccent">#ff860b</color>
+    <!--    <color name="theme_color">#00ff79</color>-->
+    <color name="theme_color">#ff860b</color>
+    <color name="theme_color_light">#FF9F43</color>
+    <!--<color name="colorPrimary">#808080</color>-->
+    <!--<color name="colorPrimaryDark">#909090</color>-->
+    <!--<color name="colorAccent">#909090</color>-->
+    <color name="footer_bg">#dff3ce</color>
+    <color name="stephistory_text_color">#666666</color>
 
-    <drawable name="completedTaskBackground">#CCCCCC</drawable>
+    <color name="stephistory_heading_text_color">#000</color>
 
-    <drawable name="touchFeedback">#CFD8DC</drawable>
+    <color name="leaderboard_grey_header">#dfdfdf</color>
+
+
+    <color name="notinbar_color">#a35302</color>
+
+    <color name="notificationbar_color">#ff860b</color>
+    <color name="cell_grey">#a4a3a3</color>
+    <color name="grey_menu_bg">#c1c4c9</color>
+    <color name="default_line_text_color">#fda446</color>
+    <color name="default__text_color">#eebb87</color>
+    <color name="default__hint_color">#b6b6b6</color>
+    <color name="default__toast_color">#ff4304</color>
+
+    <color name="new_blue">#4797db</color>
+    <color name="signin_btn_color">#8c685a</color>
+
+
+    <color name="schedlue_cell_header">#000000</color>
+    <color name="schedlue_cell_desc">#d9d9d9</color>
+
+    <color name="chat_text_date">#a4a3a3</color>
+    <color name="chat_text_dark">#424242</color>
+
+    <color name="schedule_bg">#f1f1f1</color>
+
+    <color name="black_text">#010101</color>
+
+    <color name="programpost_button_color">#65000000</color>
+    <color name="trancperent">#00FFFFFF</color>
+    <color name="trancperent2">#65000000</color>
+    <color name="trancperent4">#cc000000</color>
+    <color name="trancperent8">#20000000</color>
+    <color name="orange">#ed8414</color>
+
+    <color name="gray">#f6f6f6</color>
+
+    <color name="font_color_grey">#999999</color>
+    <color name="font_color_silver">#c1c1c1</color>
+
+    <color name="bg_green">#FF10CC0D</color>
+
+    <color name="bg_main">#428bca</color>
+    <color name="future_program_text">#E4E2E2</color>
+    <color name="challenge_list_raw_grey_dark">#999999</color>
+    <color name="homepage_bottom_menu_textcolor_selected">#555555</color>
+    <color name="homepage_bottom_menu_textcolor_unselected">#898989</color>
+
+    <color name="appintment_hour_color">#dcfecc</color>
+    <color name="grey_new">#BBB9B9</color>
+    <color name="colorBlue">#3b4148</color>
+
+    <color name="btn_login">#26ae90</color>
+    <color name="second_countraw">#d5d5d5</color>
+
+    <color name="color_grey">#d3d3d3</color>
+    <color name="menubg">#535a60</color>
+    <color name="menubg_new">#ff860b</color>
+    <color name="message_grey">#f1f1f1</color>
+    <color name="color_grey_bg">#F3F1F1</color>
+
+    <color name="new_orange">#fb8a3c</color>
+
+
+    <color name="menu_grey">#eff3f6</color>
+    <color name="bg_grey">#f5f5f5</color>
+    <color name="grey_top">#cdcdcd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gery_text">#a1a194</color>
+
+
+    <color name="program_past_cell_bg">#e1e1e1</color>
+    <color name="black_light_text">#333333</color>
+    <color name="table_cell_bg">#f1f4f5</color>
+    <color name="table_cell_border">#e3e3e3</color>
+
+    <color name="contact_seperator_color">#e8e8e8</color>
+
+
+    <color name="report_line_color_bg">#fafafa</color>
+
+    <color name="add_a_goal_font_color">#000000</color>
+    <color name="search_box_gery">#f8f8f8</color>
+
+    <color name="color_FCFCFC">#fcfcfc</color>
+
+    <color name="black">#000000</color>
+    <color name="grey">#606060</color>
+    <color name="dark_text">#282828</color>
+
+    <color name="payment_price_yellow">#ff850b</color>
+    <color name="grid_color">#F3F3F3</color>
+
+
+    <color name="program_orange">#ff8e25</color>
+
+
+    <color name="tip_brown">#4c4c4c</color>
+    <color name="tip_brown_hard">#4d4d4d</color>
+
+    <color name="tip_bottom">#f87515</color>
+
+    <color name="heading_new_design">#0e3046</color>
+    <color name="whatsonmind_new_design">#8d8d8e</color>
+
+    <!--    <color name="profile_lable_color">#8d8d8e</color>-->
+
+
+    <color name="timeline_username_new_design">#414b56</color>
+
+    <!-- native post -->
+    <color name="text_heading_post">#282828</color>
+    <color name="text_title_post">#282828</color>
+    <color name="text_normal_text_post">#7e7e82</color>
+    <color name="text_normal_white">#ffffff</color>
+
+    <color name="grey_in_reports">#464646</color>
+
+    <color name="grey_line">#e6e6e6</color>
+
+    <color name="goal_grey_small_text">#000000</color>
+    <color name="goal_grey_big_text">#000000</color>
+    <color name="blue">#1FCECB</color>
+    <color name="red">#FF0000</color>
+
+
+    <color name="reports_normal_text">#747473</color>
+
+    <color name="new_channeling_grey">#d6d2d2</color>
+
+    <color name="no_report_data_message">#f5f5f5</color>
+    <color name="no_report_data_message_text_small">#a6a5a5</color>
+
+    <color name="timeline_text">#6c6c6c</color>
+    <color name="timeline_para_title">#666</color>
+    <color name="timeline_sub_title_text">#aeadad</color>
+    <color name="timeline_blue_text">#0662b8</color>
+
+
+    <color name="box_border">#d1d1d1</color>
+
+    <color name="green">#56ec46</color>
+
+    <color name="toast_bg_url">#ebebeb</color>
+
+    <color name="new_line_seperator">#d9d9d9</color>
+
+    <color name="black_transparent_30">#30000000</color>
+    <color name="black_transparent_50">#50000000</color>
+    <color name="white_transparent_80">#80FFFFFF</color>
+    <color name="white_transparent_50">#50FFFFFF</color>
+    <color name="grey_transparent_50">#50606060</color>
+    <color name="grey_transparent_20">#20606060</color>
+    <color name="grey_transparent_10">#10606060</color>
+    <color name="color_blue_accent">#0088e7</color>
+    <color name="toolbar_dropshadow_end_color">#88333333</color>
+    <color name="menu_bg_grey">#a9a9a9</color>
+
+    <color name="yellow">#ffdd41</color>
+
+    <color name="icon_background_color_selected_user">#959595</color>
+
+    <color name="cards_incomplete_orange">#ff7a7b</color>
+
+    <color name="button_red_color">#f43232</color>
+    <color name="text_color_call_type">#6e6e6e</color>
+    <color name="text_color_also_on_call">@color/text_color_call_type</color>
+
+
+    <!--<color name="colorPrimary">#fd8645</color>-->
+    <!--<color name="colorPrimaryDark">#fb5818</color>-->
+    <!--<color name="colorAccent">#F5B041</color>-->
+    <!-- channeling -->
+    <color name="background">#D5D8DC</color>
+    <color name="grey_background">#44909497</color>
+
+    <color name="text_color_primary">@android:color/black</color>
+    <color name="text_color_secondary">#000000</color>
+    <color name="text_color_tertiary">#5DADE2</color>
+    <color name="text_color_quaternary">#EE3113</color>
+    <color name="text_color_quinary">#7e7e7f</color>
+    <color name="text_color_widget_primary">@android:color/white</color>
+
+    <color name="text_color_contact_main">#212121</color>
+    <color name="text_color_contact_sub">#9c9c9c</color>
+
+
+    <color name="colorWindowBackDark2">#ff860b</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite2">#e4ebed</color>
+    <color name="coloGreen">#3abdb4</color>
+    <color name="coloGray">#afb6c0</color>
+    <color name="coloGray3">#5b605f</color>
+    <color name="coloGray4">#f7f7f7</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorOrange2">#faa41a</color>
+
+
+    <color name="lifeplus_green">#00ff79</color>
+    <color name="lifeplus_login_bg">#5b5a5a</color>
+
+    <color name="color_DDDDDD">#DDDDDD</color>
+    <color name="btn_disabled_font">#AAAAAA</color>
+    <color name="ad_background_color">#A3DFFF</color>
+    <color name="color_3B3B3B">#3B3B3B</color>
+    <color name="light_text_title">#A5A5A5</color>
+    <color name="color_377DDD">#377DDD</color>
+    <color name="color_C3C3C3">#C3C3C3</color>
+    <color name="color_727272">#727272</color>
+    <color name="color_cc727272">#cc727272</color>
+    <color name="to_do_background">#F8F8F8</color>
+    <color name="to_do_cancel">#FF4343</color>
+
+    <color name="color_4B4C4A">#4B4C4A</color>
+    <color name="color_2C2C2C">#2C2C2C</color>
+    <color name="color_EAEAEA">#EAEAEA</color>
+    <color name="report_action_text">#989898</color>
+    <color name="color_F4F4F4">#F4F4F4</color>
+    <color name="color_DBDBDB">#DBDBDB</color>
+    <color name="calendar_week">#BFBFBF</color>
+    <color name="point_leader_board_user3">#6CBCF1</color>
+    <color name="point_leader_board_user1">#FD8524</color>
+    <color name="point_leader_board_user2">#EA6CDB</color>
+    <color name="point_leader_board_me">#F5F5F5</color>
+    <color name="life_plus_gradient_start">#2AFD79</color>
+    <color name="circularStartColor">#40EF82</color>
+    <color name="circularEndColor">#1AC159</color>
+    <color name="life_plus_gradient_end">#0AC350</color>
+
+    <color name="colorOrange3">#f9a21b</color>
+    <color name="ayubo_gradient_start">#FF9F43</color>
+
+    <color name="history_price">#FD8524</color>
+    <color name="ayubo_gradient_end">#E6801F</color>
+    <color name="subscribe_card_background">#2FDB69</color>
+    <color name="color_B3B3B3">#B3B3B3</color>
+    <color name="chart_x_axis">#77838F</color>
+    <color name="earnings_color">#1E2022</color>
+
+
+    <color name="daily_g_color1">#2AFD79</color>
+    <color name="daily_g_color2">#0AC350</color>
+
+    <color name="weekly_g_color1">#FFCD5F</color>
+    <color name="weekly_g_color2">#FFB719</color>
+
+    <color name="monthly_g_color1">#FF8686</color>
+    <color name="monthly_g_color2">#FF5353</color>
+    <color name="incoming_call">#42AF1E</color>
+    <color name="color_EE2B24">#EE2B24</color>
+    <color name="color_BDBDBD">#BDBDBD</color>
+    <color name="color_777777">#777777</color>
+    <color name="color_3082E2">#3082E2</color>
+    <color name="color_41D38A">#41D38A</color>
+    <color name="color_707070">#707070</color>
+    <color name="color_FEBC2C">#FEBC2C</color>
+    <color name="color_FF6E69">#FF6E69</color>
+    <color name="color_D54A44">#D54A44</color>
+    <color name="color_FFC598">#FFC598</color>
+    <color name="color_BBBBBB">#BBBBBB</color>
+    <color name="color_B5DEE0">#B5DEE0</color>
+    <color name="color_EBF1FF">#EBF1FF</color>
+    <color name="color_2E2E2E">#2E2E2E</color>
+    <color name="color_5CDD8C">#5CDD8C</color>
+    <color name="color_feeedf">#feeedf</color>
+    <color name="color_2CAA4F">#2CAA4F</color>
+    <color name="color_891846">#891846</color>
+    <color name="color_B1B1D4">#B1B1D4</color>
+    <color name="color_FD4343">#FD4343</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+
 
 </resources>

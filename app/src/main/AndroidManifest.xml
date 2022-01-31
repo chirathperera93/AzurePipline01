@@ -1,48 +1,1034 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (C) 2015 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.microsoft.sample">
+    package="com.ayubo.life.ayubolife">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATWRITE_EXTERNAL_STORAGEE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" /> -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.flash" />
 
     <application
-        android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:name=".webrtc.App"
+        android:allowBackup="true"
+        android:icon="${appIcon}"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
         <activity
-            android:name="com.microsoft.sample.tasks.TasksActivity"
-            android:theme="@style/AppTheme.OverlapSystemBar">
+            android:name=".revamp.v1.activity.RedeemPointActivity"
+            android:exported="false" />
+        <activity
+            android:name=".revamp.v1.activity.AddCorporateEmailDialog"
+            android:exported="false"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".revamp.v1.activity.CampaignJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".revamp.v1.activity.AddCityDialog"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".revamp.v1.fragment.V1NewFeedActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".revamp.v1.activity.MyStepDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".revamp.v1.activity.AddMoreWidgetActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".revamp.v1.activity.MyWeightActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".revamp.v1.activity.MyStepActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".revamp.v1.activity.WellnessHeroesActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.MainPaymentHistoryActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".new_payment.activity.PayNowResultActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".new_payment.activity.NewChangePaymentActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".new_payment.activity.NewPaymentMainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.GoogleMapAddress"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".prochat.appointment.NewChatActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.NewDiscoverActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.OMViewHistory"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.OMPage5TrackOrder"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.OMMainPage"
+            android:screenOrientation="unspecified" /> <!-- <activity android:name=".health.OMPage4PaymentDetail" /> -->
+        <!-- <activity android:name=".health.OMPage3SelectPartner" /> -->
+        <activity
+            android:name=".health.OMPage2Sub2AddNewLocation"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.OMPage2Sub1ChangeLocation"
+            android:screenOrientation="unspecified" /> <!-- <activity android:name=".health.OMPage2SetLocation" /> -->
+        <!-- <activity android:name=".health.OMPage1Submit" /> -->
+        <activity
+            android:name=".push.NotificationActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity="" />
+        <activity android:name=".lifeplus.StepSummaryDashboardActivity" />
+        <activity
+            android:name=".login.NewGetStartedActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.PointsLeaderboardActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.FeedbackFinalPageActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.FeedBackPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".lifeplus.NewDashboard.HydrationTrackerDialog"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".reports.activity.UploadMediaReportActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.NewDashboard.MyBadgesActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.DiscoverToNewDashboard"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PurchaseHistory"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.ProfileNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map_challange.MapChallangeKActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".walk_and_win.WalkWinNotifyDetailActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".walk_and_win.WalkWinHistoryActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".walk_and_win.WalkWinClaimAwardActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".walk_and_win.WalkWinMainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentSummaryViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentPinSubmitActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.InsuranceBenefactorDetailActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.InsuranceAddBankAccountActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.ClaimUploadDocumentActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.FileClaimActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.PolicyDetailActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.InsuranceOverviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".insurances.Activities.InsurancePolicesActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PayCommonActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.CommonPayActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.TodayTilesActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".discover_search.DiscoverSearchActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".book_videocall.VideoCallBookingActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_group_view.GroupViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".book_videocall.BookVideoCallActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.UserProfileActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".twilio.TwillioCallInit"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".twilio.TwilioHomeActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".twilio.TwilioSettingsActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".post.activity.NativePostJSONActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".map_challenges.NativeJsonActivity" />
+        <activity
+            android:name=".lifeplus.ProfileActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".lifeplus.LifePlusProgramActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".map_challenges.treasureview.TreasureViewActivity" />
+        <activity
+            android:name=".programs.viewexperts.ViewExpertsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".programs.settings.ProgramSettingsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.upload.UploadReportActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".challenges.ChallangeActivity" />
+        <activity
+            android:name=".reports.getareview.GetAReviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.AddReportForReviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.SelectanExpertActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.activity.NewLeaderBoardActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.OtherPaymentActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentConfirmActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentFailActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentSuccessActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.PaymentSettingsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.EnterMobileNumberActivityPayment"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".payment.activity.EnterDialogPinNumberActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".bottom_menu.activities.HealthActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".janashakthionboarding.VideoPlayActivity" />
+        <activity android:name=".programs.TextChartView" />
+        <activity android:name=".programs.BarChart" />
+        <activity android:name=".programs.OpenImageActivity" />
+        <activity
+            android:name=".login.LanguageSelectionActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".programs.ProgramActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".activity.TestActivity" />
+        <activity
+            android:name=".janashakthionboarding.mood_calender.CalenderDetailsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.mood_calender.MoodCalenderActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.SeyShellsWelcome"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".ask.AskActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.dayanamic_questions.SeaShellsQuestionnaireActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.dayanamic_questions.FinalAnswerActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.dayanamic_questions.IntroActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.dayanamic_questions.AnswerActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.title_clicked.PendingAnalysisOkActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.title_clicked.getAgreeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.title_clicked.TitleClickedActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.PaymentCheck_Activity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".janashakthionboarding.reportupload.SelectReportsTypesActivity" />
+        <activity android:name=".janashakthionboarding.reportupload.SelectReportTypeActivity" />
+
+        <receiver
+            android:name=".CallReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.ayubo.life.ayubolife" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".CallReceiver" />
+
+        <receiver
+            android:name=".signalr.ReStartForegroundService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".signalr.SignalRForegroundService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".login.SplashScreen"
+            android:screenOrientation="unspecified"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ayubo.life" />
+            </intent-filter>
+
+            <!-- <intent-filter android:label="DeepLink"> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+
+
+            <!-- <data android:scheme="ayubo.life" /> -->
+
+
+            <!-- </intent-filter> -->
         </activity>
-        <activity android:name="com.microsoft.sample.taskdetail.TaskDetailActivity" />
-        <activity android:name="com.microsoft.sample.addedittask.AddEditTaskActivity" />
         <activity
-            android:name="com.microsoft.sample.statistics.StatisticsActivity"
-            android:parentActivityName=".tasks.TasksActivity"
-            tools:ignore="UnusedAttribute">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
+            android:name=".map_challange.activity.JournalActivity"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".timeline.FilteredTimeline_Activity" />
+        <activity
+            android:name=".janashakthionboarding.reportupload.ReportUploadActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.experts.ExpertsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".actions.ActionButtonEventsManager"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.webview.JanashakthiWebViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.questionnaire.JanashakthiQuestionnaireActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.intro.JanashakthiIntroActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.welcome.JanashakthiWelcomeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.reportupload.ReportPreviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".janashakthionboarding.medicaldataupdate.MedicalUpdateActivity"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="firebase_crash_collection_enabled"
+            android:value="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="102987489" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" /> <!-- <meta-data -->
+        <!-- android:name="io.fabric.ApiKey" -->
+        <!-- android:value="<FABRIC_API_KEY>" -->
+        <!-- /> -->
+        <!-- <meta-data android:name="firebase_crash_collection_enabled" android:value="false" /> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".tasks.TasksActivity" />
-        </activity>
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- <meta-data -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDWtUq4lZJkNR6Imvv3Ed4vSUWsh4FKEuk" /> <!-- android:name=".goals_extention.DashboardViewActivity" -->
+        <!-- android:name=".login.SplashScreen" -->
+        <activity
+            android:name=".login.LoginActivity_First"
+            android:screenOrientation="unspecified" />
+
+        <service
+            android:name=".food.FloatingViewService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".body.GPSService"
+            android:icon="@drawable/icon"
+            android:label="GPSService" /> <!-- Intent service -->
+        <service
+            android:name=".mobile_login.HttpService"
+            android:exported="false" /> <!-- <service -->
+        <!-- android:name=".webrtc.services.gcm.GcmPushListenerService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name="com.quickblox.messages.services.gcm.QBGcmPushInstanceIDService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.gms.iid.InstanceID" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service
+            android:name=".push.MyFirebaseMessagingService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Used for install referrer tracking -->
+        <!-- <service android:name=".push.MyFirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service android:name=".push.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.quickblox.messages.TYPE"
+            android:value="FCM" />
+        <meta-data
+            android:name="com.quickblox.messages.SENDER_ID"
+            android:value="@string/sender_id" />
+        <meta-data
+            android:name="com.quickblox.messages.QB_ENVIRONMENT"
+            android:value="DEVELOPMENT" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".login.EnterMobileNumberActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.BarcodeScanner"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.SimpleTabsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.WaterActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.Register"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.LetsGo"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".activity.QRScannerActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.BodyViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.HealthViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.FoodViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.MindViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.RXViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.Medicine_ViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.ActivityTrackerActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.ExpertViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.WorkoutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.CommonWebViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.Welcome_Animation_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.FirstInroViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.SecondIntroViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.ThirdIntroViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.FourthIntroViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.RXView_SecondActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.CommonListViewWithSearchActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.CommonListView_ReportType"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.MedicineView_PaymentActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".qrcode.DecoderActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.QRWebViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".satalite_menu.ShareAyuboActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".satalite_menu.CommiunityActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".satalite_menu.QRcodeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".satalite_menu.HelpFeedbackActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".satalite_menu.ProfileActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.PrescriptionHistoryViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.NewHomeWithSideMenuActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.CommonView_Second_WebviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.TermsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.PrivacyActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.CommonTabActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.TermsDiliveMedicinActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.DayActivitiesActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.Health_MainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".mind.Mind_MainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.StartWorkoutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.Body_CommonWebViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".health.MapActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.StartMapActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.ShareWorkoutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.WorkoutShareListActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.WorkoutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.HomePage_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.MyHealthDataActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.ChallengesActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".experts.Activity.MyDoctor_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_popup_menu.DoctorWebviewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_popup_menu.MyDoctorLocations_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_popup_menu.Reports_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_popup_menu.AskQuestion_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.PostDataActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.PostDataList_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.AudioPlayerActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.RelaxViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home.EatViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".challenges.NewCHallengeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".home_popup_menu.AppointmentViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.SetStepsCalibilityActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.FoogleFitConnect_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.MapChallengeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.Journal_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.MapJoinChallenge_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.CompletedSoloChallangeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.NotificationDetailsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.QuitChallangeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.NotificationDetailsViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.EnterVerificationCodeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".login.EnterPromoCodeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".body.DisplayWorkoutList"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.TemplateViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.AnimateView_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.ShareMapPosition_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.ChallengeCompletedView_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.Badges_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.HealthViewActivityNew"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.BadgesDetails_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.Reports_MainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.SelectFamilyMember_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.ReportsCommonViewForReload"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.PanaramaView_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.PanaromaView2_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.PanoramaView_LawDevices_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.PanaramaView_NewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.NotificationNewTest_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.ContactDetailsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.SimpleWebViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals.AddGoals_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals.SelectGoalCategory_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals.PickAGoal_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals.AchivedGoal_Activity"
+            android:screenOrientation="unspecified" /> <!-- <activity android:name=".timeline.NativeTimeline_Activity"></activity> -->
+        <activity
+            android:name=".timeline.TimelineVideo_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.TimelineImage_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.TimelineGif_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.Timeline_NewPost_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.LikedUsers_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".our_service.ShowDoctoresActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.bottummenu.HealthViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.AddComments_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".timeline.OpenPostActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.StepHistory_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.SelecteAverageType_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.DashBoard_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.DashboardViewActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.ShareGoals_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".channeling.activity.DashboardActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.DoctorActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.VisitDoctorActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".channeling.activity.ScheduleActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:label="@string/title_activity_schedule"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.VideoRequestActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".channeling.activity.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.SourceActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.UserDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".channeling.activity.CustomDigitEntryDialogActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
+            android:theme="@style/AppDialogTheme" />
+        <activity
+            android:name=".channeling.activity.ResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.UploadActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".channeling.activity.BookLaterActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.HistoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".channeling.activity.VideoSessionActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/ChannelingAppTheme" />
+        <activity
+            android:name=".lifepoints.LifePointActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".goals_extention.DashboardViewActivityNew"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.TestReportsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.ReportDetailsActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.CreateFamilyMemberActivity"
+            android:screenOrientation="unspecified" /> <!-- <activity -->
+        <!-- android:name=".reports.PDFDownloader" -->
+        <!-- android:screenOrientation="unspecified" /> -->
+        <activity
+            android:name=".reports.activity.SelectFamilyMemberActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.AssignReportActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".reports.activity.AssignUserActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".map_challenges.activity.LeaderBoardActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".bottom_menu.activities.DietActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.ContactInfoActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".notification.activity.NotificationsListActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".notification.activity.SingleTimeline_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".kotlin.ChatActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".quick_links.experts.activity.ExpertActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".prochat.appointment.AyuboChatActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppThemeDarkSplash"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.flavor.activity.AboutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".prochat.appointment.HealthNetBuy_Activity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".post.activity.NativePostActivity"
+            android:screenOrientation="unspecified" />
     </application>
 
 </manifest>
